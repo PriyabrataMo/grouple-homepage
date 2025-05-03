@@ -40,6 +40,9 @@ export const FeaturePills = () => {
   // Estimate average pill width for animation calculation
   const averagePillWidth = 220; // pixels, includes margin
 
+  // Use a smaller pill width on mobile
+  // const mobilePillWidth = 180; // pixels, including margin
+
   // Function to render a single row of pills
   const renderRow = (features: typeof topRowFeatures, rowIndex: number) => {
     // Create multiple copies for continuous scrolling
@@ -71,19 +74,19 @@ export const FeaturePills = () => {
         {repeatedItems.map((feature, index) => (
           <div
             key={`${rowIndex}-${index}`}
-            className="mx-3 px-5 py-3 bg-gradient-to-r from-gray-800/60 to-gray-700/40 rounded-full border border-gray-700/30 flex items-center shadow-md shrink-0"
+            className="mx-2 sm:mx-3 px-3 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-gray-800/60 to-gray-700/40 rounded-full border border-gray-700/30 flex items-center shadow-md shrink-0"
           >
-            <div className="mr-3 p-1 rounded-full bg-white flex items-center justify-center shadow-inner">
+            <div className="mr-2 sm:mr-3 p-1 rounded-full bg-white flex items-center justify-center shadow-inner">
               <Image
                 src={feature.icon}
                 alt={`${feature.name} icon`}
                 width={20}
                 height={20}
-                className="h-5 w-5"
+                className="h-4 w-4 sm:h-5 sm:w-5"
                 unoptimized
               />
             </div>
-            <span className="text-gray-300 font-medium text-sm tracking-wide">
+            <span className="text-gray-300 font-medium text-xs sm:text-sm tracking-wide">
               {feature.name}
             </span>
           </div>
@@ -93,15 +96,15 @@ export const FeaturePills = () => {
   };
 
   return (
-    <section className="relative w-5xl max-w-7xl mx-auto py-24 bg-gradient-to-b from-[#111111] to-[#0a0a0a] border border-gray-800 rounded-3xl overflow-hidden">
-      <div className="mb-16 text-center px-4">
-        <h2 className="text-2xl font-medium mb-6 text-gray-300">
+    <section className="relative w-full max-w-7xl mx-auto py-12 sm:py-16 md:py-24 px-4 bg-gradient-to-b from-[#111111] to-[#0a0a0a] border border-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden">
+      <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+        <h2 className="heading-gradient text-lg sm:text-xl font-medium mb-4 sm:mb-6 px-2">
           Enhance your Guest Experience with powerful features using Grouple.
         </h2>
       </div>
 
       {/* Top row features mask */}
-      <div className="relative mask-fade-horizontal mb-8">
+      <div className="relative mask-fade-horizontal mb-4 sm:mb-8">
         {renderRow(topRowFeatures, 0)}
       </div>
       <div className="relative mask-fade-horizontal">

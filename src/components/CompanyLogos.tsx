@@ -29,7 +29,9 @@ export const CompanyLogos = () => {
     if (!container) return;
 
     let scrollPosition = 0;
-    const scrollSpeed = 0.5; // Adjust for faster/slower scrolling
+    // Adjust scroll speed based on screen width for better mobile experience
+    const isMobile = window.innerWidth < 768;
+    const scrollSpeed = isMobile ? 0.3 : 0.5; // Slower on mobile
 
     const scroll = () => {
       if (!container) return;
@@ -47,26 +49,39 @@ export const CompanyLogos = () => {
 
     const animation = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(animation);
+    // Update scroll speed on resize
+    const handleResize = () => {
+      scrollPosition = container.scrollLeft;
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      cancelAnimationFrame(animation);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
-    <div className="w-4xl overflow-hidden py-6 mt-2 mb-8 pt-10">
-      <p className="text-center text-sm text-gray-400 mb-6">
-        Trusted by top companies
-      </p>
+    <div className="w-full max-w-full overflow-hidden py-3 sm:py-6 mt-2 mb-4 sm:mb-8">
+      <h4 className="text-center text-gray-400 text-xs sm:text-sm mb-2 sm:mb-4 px-4">
+        Trusted by brands worldwide
+      </h4>
       <div
         ref={containerRef}
-        className="flex items-center space-x-10 overflow-hidden whitespace-nowrap pt-6"
+        className="flex items-center space-x-5 sm:space-x-10 overflow-hidden whitespace-nowrap pt-3 sm:pt-6"
       >
         {allLogos.map((logo, index) => (
-          <div key={index} className="flex-shrink-0 h-[40px] relative">
+          <div
+            key={index}
+            className="flex-shrink-0 h-[30px] sm:h-[40px] w-[70px] sm:w-[100px] relative flex items-center justify-center"
+          >
             <Image
               src={logo}
               alt="Partner logo"
-              width={100}
-              height={30}
-              className="h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+              width={90}
+              height={36}
+              className="max-h-[30px] sm:max-h-[40px] max-w-[70px] sm:max-w-[100px] w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
             />
           </div>
         ))}

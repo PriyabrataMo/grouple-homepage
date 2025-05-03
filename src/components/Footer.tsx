@@ -6,57 +6,64 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-black text-white py-10 sm:py-16">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand Section */}
             <div className="space-y-4">
               <Link href="/" className="flex items-center">
-                <h1 className="text-[#4070ff] text-3xl font-bold">grouple</h1>
+                <h1 className="text-[#4070ff] text-2xl sm:text-3xl font-bold">
+                  grouple
+                </h1>
               </Link>
-              <p className="text-gray-400 mt-4">
+              <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">
                 Designed with love, for groups to
-                <br />
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>
                 create memories together.
               </p>
-              <p className="text-gray-400 mt-2">Ghosh Technology Pvt. Ltd</p>
+              <p className="text-gray-400 mt-2 text-sm sm:text-base">
+                Ghosh Technology Pvt. Ltd
+              </p>
 
               {/* Security & Cloud Partners */}
-              <div className="flex items-center space-x-6 pt-6">
+              <div className="flex items-center space-x-4 sm:space-x-6 pt-4 sm:pt-6">
                 <Image
                   src="https://framerusercontent.com/images/p2qiCvbNoCK6ZMOgkUTt12YWPjU.png"
                   alt="Framer Image 1"
-                  width={80}
-                  height={40}
-                  className="object-contain"
+                  width={70}
+                  height={35}
+                  className="object-contain w-[60px] sm:w-[80px]"
                 />
                 <Image
                   src="https://framerusercontent.com/images/Y1A6CWZo7xXVEypMQTUw2HVbtk.png"
                   alt="Framer Image 2"
-                  width={80}
-                  height={40}
-                  className="object-contain"
+                  width={70}
+                  height={35}
+                  className="object-contain w-[60px] sm:w-[80px]"
                 />
                 <Image
                   src="https://framerusercontent.com/images/qrtuYQXMiNQdShz1FpnvxPUxg18.png?scale-down-to=512"
                   alt="Framer Image 3"
-                  width={80}
-                  height={40}
-                  className="object-contain"
+                  width={70}
+                  height={35}
+                  className="object-contain w-[60px] sm:w-[80px]"
                 />
               </div>
             </div>
 
             {/* Company & Features Links */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-0">
               <div>
-                <h3 className="text-gray-400 font-medium mb-4">Company</h3>
-                <ul className="space-y-3">
+                <h3 className="text-gray-400 font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                  Company
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
                   <li>
                     <Link
                       href="/features"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Features
                     </Link>
@@ -64,7 +71,7 @@ export const Footer = () => {
                   <li>
                     <Link
                       href="/pricing"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Pricing
                     </Link>
@@ -72,7 +79,7 @@ export const Footer = () => {
                   <li>
                     <Link
                       href="/industries"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Industries
                     </Link>
@@ -80,7 +87,7 @@ export const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Contact Us
                     </Link>
@@ -90,12 +97,14 @@ export const Footer = () => {
 
               {/* Resources Links */}
               <div>
-                <h3 className="text-gray-400 font-medium mb-4">Resources</h3>
-                <ul className="space-y-3">
+                <h3 className="text-gray-400 font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                  Resources
+                </h3>
+                <ul className="space-y-2 sm:space-y-3">
                   <li>
                     <Link
                       href="/demo"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Demo Video
                     </Link>
@@ -103,7 +112,7 @@ export const Footer = () => {
                   <li>
                     <Link
                       href="/why-grouple"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Why Grouple
                     </Link>
@@ -114,14 +123,14 @@ export const Footer = () => {
           </div>
 
           {/* Copyright and Social Links */}
-          <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-500 text-sm">
+          <div className="border-t border-gray-800 mt-10 sm:mt-16 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <div className="text-gray-500 text-xs sm:text-sm">
               2025 Grouple. All rights reserved
             </div>
-            <div className="flex space-x-6 mt-6 md:mt-0">
+            <div className="flex space-x-5 sm:space-x-6 mt-5 sm:mt-0">
               <Link href="https://linkedin.com" aria-label="LinkedIn">
                 <svg
-                  className="h-5 w-5 text-gray-400 hover:text-white"
+                  className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 hover:text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -130,7 +139,7 @@ export const Footer = () => {
               </Link>
               <Link href="https://instagram.com" aria-label="Instagram">
                 <svg
-                  className="h-5 w-5 text-gray-400 hover:text-white"
+                  className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 hover:text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -139,7 +148,7 @@ export const Footer = () => {
               </Link>
               <Link href="https://twitter.com" aria-label="Twitter">
                 <svg
-                  className="h-5 w-5 text-gray-400 hover:text-white"
+                  className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 hover:text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
