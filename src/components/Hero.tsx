@@ -10,7 +10,7 @@ export const Hero = () => {
           NEW
         </span>
         <span className="text-sm text-white">
-          We've just released new features
+          We&apos;ve just released new features
         </span>
         <svg
           width="16"
