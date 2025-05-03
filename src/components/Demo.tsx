@@ -149,7 +149,10 @@ const Demo = () => {
       {/* Container with spacing */}
       <div className="w-full max-w-6xl px-4 mx-auto">
         {/* Background container with fixed height */}
-        <div className="relative rounded-xl overflow-hidden" style={{ height: "600px" }}>
+        <div
+          className="relative rounded-xl overflow-hidden"
+          style={{ height: "600px" }}
+        >
           {/* Background image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -170,7 +173,7 @@ const Demo = () => {
           <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
             <div className="mb-8">
               <span className="bg-blue-600 bg-opacity-30 text-blue-400 px-6 py-2 rounded-full text-sm">
-                We've Released a New Feature
+                We&apos;ve Released a New Feature
               </span>
             </div>
 

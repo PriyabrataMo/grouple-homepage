@@ -162,27 +162,27 @@ export const FeatureShowcase = () => {
   ];
 
   // Render feature icons next to text
-  const renderFeatureWithIcon = (text: string, icon: string) => (
-    <div className="flex items-start gap-3 mb-4">
-      <div className="mt-1 bg-blue-500/20 p-2 rounded-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-blue-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-      </div>
-      <span className="text-gray-300">{text}</span>
-    </div>
-  );
+  //   const renderFeatureWithIcon = (text: string, icon: string) => (
+  //     <div className="flex items-start gap-3 mb-4">
+  //       <div className="mt-1 bg-blue-500/20 p-2 rounded-full">
+  //         <svg
+  //           xmlns="http://www.w3.org/2000/svg"
+  //           className="h-5 w-5 text-blue-500"
+  //           fill="none"
+  //           viewBox="0 0 24 24"
+  //           stroke="currentColor"
+  //         >
+  //           <path
+  //             strokeLinecap="round"
+  //             strokeLinejoin="round"
+  //             strokeWidth={2}
+  //             d="M5 13l4 4L19 7"
+  //           />
+  //         </svg>
+  //       </div>
+  //       <span className="text-gray-300">{text}</span>
+  //     </div>
+  //   );
 
   return (
     <section
