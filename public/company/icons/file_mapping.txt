@@ -1,0 +1,13 @@
+# File mapping for reference
+1 226 (1).png → 1.png
+1 228.png → 2.png
+1200px-Nasscom-logo-svg 2 (2).png → 3.png
+Group (5).png → 4.png
+Group 1000006284 (1).png → 5.png
+IA Logo icon white 2 2 (2).png → 6.png
+image 23 (1).png → 7.png
+Logo white 1 (1).png → 8.png
+logo_bhubaneshwer 4 (4).png → 9.png
+meity-logo1 1 (2).png → 10.png
+ngis_logo (1) 1 (1).png → 11.png
+Pontaq-removebg-preview 3 (1) 1 (1).png → 12.png
