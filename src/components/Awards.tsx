@@ -22,11 +22,11 @@ const Awards = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 w-full overflow-hidden">
+    <section className="py-16 md:py-24 w-7xl overflow-hidden">
       <div className="container mx-auto px-4 content-center">
-        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-[#111116] to-[#07070d] p-6 md:p-10 content-center">
+        <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#191624] to-[#0a090d] p-6 md:p-10 content-center justify-center">
           <div className="flex justify-center items-center">
-            <h2 className="heading-gradient font-medium text-center mb-4 bg-clip-text">
+            <h2 className="heading-gradient text-lg sm:text-xl font-medium mb-4 sm:mb-6 px-2 pt-10 text-center">
               Awards and recognition
             </h2>
           </div>

@@ -69,13 +69,13 @@ export const Faq = () => {
     <section className="w-full py-24 flex justify-center bg-black">
       <div className="w-full max-w-6xl px-4 mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block mb-6 px-4 py-2 bg-gray-800 rounded-full border border-gray-700">
-            <span className="bg-gradient-to-r from-[#4A6AFE] to-white bg-clip-text text-transparent font-medium">
+          <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
               We&apos;ve got you covered
             </span>
           </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               Frequently Asked Questions
             </h2>
           </div>
@@ -88,10 +88,10 @@ export const Faq = () => {
               value={`item-${index}`}
               className="border-0 rounded-lg px-6 overflow-hidden bg-gray-900/30"
             >
-              <AccordionTrigger className="text-lg md:text-xl font-medium py-4 text-white">
+              <AccordionTrigger className="font-jakarta font-medium text-2xl py-4 text-white">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-300">
+              <AccordionContent className="font-manrope font-normal text-lg text-gray-300">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

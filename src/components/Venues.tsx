@@ -65,27 +65,27 @@ export default function Venues() {
 
   return (
     <section className="w-full bg-black text-white py-8 md:py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-20">
         <div className="text-center mb-6 md:mb-8">
-          <div className="inline-block mb-4 md:mb-6 px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 rounded-full border border-gray-700">
-            <span className="bg-gradient-to-r from-[#4A6AFE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
+          <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
               Industries
             </span>
           </div>
 
           <div>
-            <h2 className="heading-gradient text-xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
+            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               Built For Venues Just Like You
             </h2>
           </div>
-          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 pt-8 font-['Manrope']">
             Boost your revenue, streamline operations,
             {isMobile ? " " : <br />}
             and gain a competitive edge with Grouple.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Mobile grid tabs for phones */}
           {isMobile ? (
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -96,7 +96,7 @@ export default function Venues() {
                   className={cn(
                     "flex flex-col items-center justify-center p-4 rounded-xl border transition-all duration-200",
                     activeVenue.name === venue.name
-                      ? "bg-[#292929] border-[#4A6AFE] shadow-lg"
+                      ? "bg-[#292929] border-[#4B68FE] shadow-lg"
                       : "bg-[#1a1a1a] border-gray-800"
                   )}
                   aria-label={`Show ${venue.name} information`}
@@ -105,7 +105,7 @@ export default function Venues() {
                     className={cn(
                       "rounded-full p-2.5 mb-2 flex items-center justify-center",
                       activeVenue.name === venue.name
-                        ? "bg-[#4A6AFE]/30"
+                        ? "bg-[#4B68FE]/30"
                         : "bg-gray-800/30"
                     )}
                   >
@@ -132,7 +132,7 @@ export default function Venues() {
           ) : (
             /* Desktop tabs */
             <div className="flex justify-center mb-12 overflow-hidden pb-0">
-              <div className="bg-[#161616] rounded-full p-2 inline-flex">
+              <div className="bg-[#191624] rounded-full p-2 inline-flex">
                 {venues.map((venue) => (
                   <button
                     key={venue.name}
@@ -140,8 +140,8 @@ export default function Venues() {
                     className={cn(
                       "px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 ease-in-out mx-1",
                       activeVenue.name === venue.name
-                        ? "bg-[#292929] text-white"
-                        : "text-white hover:bg-[#222222]"
+                        ? "bg-[#2c2938] text-white"
+                        : "text-white hover:bg-[#2c2938]"
                     )}
                     aria-label={`Show ${venue.name} information`}
                   >
@@ -153,15 +153,20 @@ export default function Venues() {
           )}
 
           {/* Responsive venue display */}
-          <div className="bg-[#161616] rounded-3xl overflow-hidden">
+          <div
+            className="bg-[#161616] rounded-3xl overflow-hidden px-20"
+            style={{
+              background: "linear-gradient(to bottom right, #191624, #0a090d)",
+            }}
+          >
             <div
-              className="flex flex-col md:flex-row"
-              style={{ height: isMobile ? "auto" : "500px" }}
+              className="flex flex-col md:flex-row pl-10"
+              style={{ height: isMobile ? "auto" : "450px" }}
             >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeVenue.name}
-                  className="w-full md:w-1/3 bg-[#121212] p-6 md:p-8 flex flex-col justify-center"
+                  className="w-full md:w-2/5 p-6 md:p-4 md:pl-8 flex flex-col justify-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -213,29 +218,51 @@ export default function Venues() {
                   </motion.p>
                 </motion.div>
               </AnimatePresence>
-              <div className="w-full md:w-2/3 h-[250px] md:h-full relative">
+              <div className="w-full md:w-3/5 h-[250px] md:h-full relative flex items-center justify-center p-0 md:p-4 md:pr-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeVenue.name}
-                    className="absolute inset-0"
+                    className="w-full h-full relative flex items-center justify-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="h-full rounded-b-3xl md:rounded-b-none md:rounded-r-3xl overflow-hidden">
-                      <Image
-                        src={activeVenue.image}
-                        alt={`${activeVenue.name} venue`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 66vw"
-                        style={{
-                          objectFit: "cover",
-                          objectPosition: "center",
-                        }}
-                        priority
-                      />
-                    </div>
+                    {isMobile ? (
+                      <div className="w-full h-full">
+                        <Image
+                          src={activeVenue.image}
+                          alt={`${activeVenue.name} venue`}
+                          fill
+                          sizes="100vw"
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: "center",
+                          }}
+                          className="rounded-b-3xl"
+                          priority
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-[374px] w-[481px] max-w-[500px] rounded-2xl p-5 bg-[#242426]">
+                        <div className="w-full h-full overflow-hidden rounded-xl">
+                          <Image
+                            src={activeVenue.image}
+                            alt={`${activeVenue.name} venue`}
+                            width={441}
+                            height={334}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
+                            className="rounded-xl"
+                            priority
+                          />
+                        </div>
+                      </div>
+                    )}
                   </motion.div>
                 </AnimatePresence>
               </div>

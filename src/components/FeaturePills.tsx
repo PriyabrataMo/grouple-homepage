@@ -96,19 +96,20 @@ export const FeaturePills = () => {
   };
 
   return (
-    <section className="relative w-full max-w-7xl mx-auto py-12 sm:py-16 md:py-24 px-4 bg-gradient-to-b from-[#111111] to-[#0a0a0a] border border-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden">
+    <section className="relative w-full max-w-7xl mx-auto py-40 sm:py-16 md:py-40 px-4 bg-gradient-to-br from-[#191624] to-[#0a090d] border border-gray-800 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-center items-center">
       <div className="mb-8 sm:mb-12 md:mb-16 text-center">
-        <h2 className="heading-gradient text-lg sm:text-xl font-medium mb-4 sm:mb-6 px-2">
+        <h2 className="heading-gradient text-lg sm:text-xl font-medium mb-4 sm:mb-6 px-2 pt-10">
           Enhance your Guest Experience with powerful features using Grouple.
         </h2>
       </div>
-
       {/* Top row features mask */}
-      <div className="relative mask-fade-horizontal mb-4 sm:mb-8">
-        {renderRow(topRowFeatures, 0)}
-      </div>
-      <div className="relative mask-fade-horizontal">
-        {renderRow(bottomRowFeatures, 1)}
+      <div className="w-5xl flex flex-col items-center">
+        <div className="relative mask-fade-horizontal mb-4 sm:mb-8 w-full overflow-hidden flex justify-center">
+          {renderRow(topRowFeatures, 0)}
+        </div>
+        <div className="relative mask-fade-horizontal w-full overflow-hidden flex justify-center">
+          {renderRow(bottomRowFeatures, 1)}
+        </div>
       </div>
     </section>
   );

@@ -83,12 +83,12 @@ const Demo = () => {
     );
 
     for (let i = 0; i < numberOfParticles; i++) {
-      const size = Math.random() * 2 + 0.5; // Smaller, more dot-like size
+      const size = Math.random() * 1.5 + 0.5; // Smaller dot-like size
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const speedX = (Math.random() - 0.5) * 1.5; // 3x faster horizontal speed
       const speedY = (Math.random() - 0.5) * 1.5; // 3x faster vertical speed
-      const color = "rgba(74, 106, 254, 0.6)"; // #4A6AFE with opacity
+      const color = "rgba(255, 255, 255, 0.6)"; // White dots with opacity
 
       particlesArray.push(new Particle(x, y, size, speedX, speedY, color));
     }
@@ -149,36 +149,25 @@ const Demo = () => {
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 flex justify-center">
       {/* Container with spacing */}
-      <div className="w-full max-w-6xl px-4 mx-auto">
+      <div className="w-full px-4 mx-auto pt-10 flex justify-center">
         {/* Background container with 3D effect and border */}
         <div
-          className="relative rounded-xl overflow-hidden shadow-[0_0_50px_rgba(74,106,254,0.3)] border border-[#4A6AFE]/30"
+          className="relative rounded-4xl overflow-hidden"
           style={{
-            height: "500px",
+            width: "1080px",
+            height: "617px",
+            maxWidth: "100%",
             transform: "perspective(1000px) rotateX(2deg)",
             transformStyle: "preserve-3d",
+            borderTop: "1px solid rgba(255, 255, 255, 0.4)", // White border only at the top
+            boxShadow: "0 30px 50px -30px #031885", // Shadow only at the bottom
           }}
         >
           {/* Enhanced background with stronger blue flow effect */}
           <div className="absolute inset-0 z-0">
-            {/* Primary glow elements with higher opacity */}
-            <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[40%] bg-[#4A6AFE] opacity-25 blur-[80px] transform rotate-[-15deg] animate-pulse" />
+            {/* Removed left and right glow elements, keeping only bottom glow */}
             <div
-              className="absolute top-[60%] right-[-5%] w-[50%] h-[40%] bg-[#4A6AFE] opacity-25 blur-[80px] transform rotate-[30deg] animate-pulse"
-              style={{ animationDelay: "1.5s" }}
-            />
-            <div
-              className="absolute top-[40%] left-[-10%] w-[40%] h-[30%] bg-[#4A6AFE] opacity-30 blur-[70px] transform rotate-[10deg] animate-pulse"
-              style={{ animationDelay: "0.7s" }}
-            />
-
-            {/* Additional glow elements for more visible effect */}
-            <div
-              className="absolute top-[10%] right-[5%] w-[30%] h-[25%] bg-[#4A6AFE] opacity-20 blur-[60px] transform rotate-[45deg] animate-pulse"
-              style={{ animationDelay: "1s" }}
-            />
-            <div
-              className="absolute bottom-[-10%] left-[30%] w-[40%] h-[30%] bg-[#4A6AFE] opacity-25 blur-[70px] transform rotate-[-5deg] animate-pulse"
+              className="absolute bottom-[-15%] left-[20%] w-[1080px] h-[617px] bg-[#4B68FE] opacity-30 blur-[80px] transform animate-pulse"
               style={{ animationDelay: "0.3s" }}
             />
 
@@ -188,15 +177,18 @@ const Demo = () => {
               alt="Background"
               fill
               style={{ objectFit: "cover" }}
-              className="brightness-[0.25]"
+              className="brightness-[0.4] contrast-[1.2]"
             />
           </div>
 
           {/* Border highlight effect */}
           <div
-            className="absolute inset-0 z-5 rounded-xl border border-[#4A6AFE]/30 border-opacity-50"
+            className="absolute inset-0 z-5 rounded-4xl"
             style={{
-              boxShadow: "inset 0 0 30px rgba(74,106,254,0.3)",
+              boxShadow:
+                "inset 0 20px 30px -20px rgba(74,106,254,0)" /* Remove top glow */,
+              borderTop: "2px solid rgba(255, 255, 255, 0.4)",
+              borderLeft: "1px solid rgba(255, 255, 255, 0.4)", // Keep only the white top border
             }}
           />
 
@@ -207,27 +199,27 @@ const Demo = () => {
 
           {/* Content - with subtle 3D transform - increased z-index from 20 to 25 */}
           <div
-            className="relative z-25 h-full flex flex-col items-center justify-center text-center px-4"
+            className="relative z-25 h-full pt-25 flex flex-col items-center justify-center text-center px-4"
             style={{
               transform: "translateZ(20px)",
               textShadow: "0 2px 10px rgba(0,0,0,0.5)",
               zIndex: 25,
             }}
           >
-            <div className="inline-block mb-4 sm:mb-6 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800 rounded-full border border-gray-700">
-              <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent font-medium text-xs sm:text-sm">
+            <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+              <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
                 We&apos;ve Released a New Feature
               </span>
             </div>
 
-            <h1 className="heading-gradient text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2">
+            <h2 className="heading-gradient text-xl md:text-[54px] pt-10 lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               The Next-Generation Group
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
               Booking Management Software
-            </h1>
+            </h2>
 
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-12 max-w-3xl mx-auto px-2">
+            <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 pt-8 font-['Manrope']">
               Unveil our latest innovation on Grouple,
               <br className="hidden sm:block" />
               delivering unmatched capabilities
@@ -235,9 +227,9 @@ const Demo = () => {
               to elevate your guest experience.
             </p>
 
-            <div>
+            <div className="pt-10 ">
               <button
-                className="bg-[#4A6AFE] hover:bg-[#3a59e0] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-medium transition-all cursor-pointer shadow-lg transform hover:scale-105 duration-200"
+                className="bg-[#4B68FE] hover:bg-[#3a59e0] text-white px-4 sm:px-6 rounded-lg text-sm sm:text-base font-medium transition-all cursor-pointer shadow-lg transform hover:scale-103 duration-200 flex items-center justify-center"
                 onClick={() =>
                   window.open("https://calendly.com/rohit-grouple", "_blank")
                 }

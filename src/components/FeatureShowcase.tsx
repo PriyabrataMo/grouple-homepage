@@ -32,47 +32,68 @@ const FeatureItem = ({
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       <div className="flex-1 relative flex justify-center mb-6 md:mb-0">
-        <div className="relative w-full md:w-[90%] max-w-[500px]">
+        <div
+          className="relative w-full md:w-[85%] max-w-[500px] rounded-3xl p-5"
+          style={{
+            background: "linear-gradient(to bottom right, #111111, #333333)",
+            position: "relative",
+            overflow: "hidden",
+            border: "2px solid #000000",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
+          }}
+        >
           <motion.div
-            className="absolute inset-0 rounded-3xl border-2 border-black z-10"
-            animate={{
-              boxShadow: [
-                "0 0 0 0 rgba(255,255,255,0.8)",
-                "0 0 0 5px rgba(255,255,255,0.4)",
-                "0 0 0 10px rgba(255,255,255,0)",
-              ],
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-
-          <div className="relative z-0 rounded-3xl overflow-hidden shadow-xl border-2 border-black">
-            <Image
-              src={imageSrc}
-              alt={title}
-              width={480}
-              height={320}
-              className="w-full h-auto"
-              priority
+            className="absolute inset-0 z-0 rounded-3xl"
+            style={{ padding: "1px" }}
+          >
+            <motion.div
+              className="light-border w-full h-full absolute rounded-3xl"
+              animate={{
+                backgroundPosition: ["0% 0%", "200% 0%"],
+              }}
+              style={{
+                backgroundSize: "200% 100%",
+                backgroundImage:
+                  "linear-gradient(90deg, transparent 0%, transparent 45%, rgba(255,255,255,0.15) 50%, transparent 55%, transparent 100%)",
+              }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "linear",
+              }}
             />
+          </motion.div>
+          <div className="w-full h-full overflow-hidden rounded-2xl relative z-10 flex items-center justify-center">
+            <div className="w-full aspect-[526/498] relative flex items-center justify-center">
+              <Image
+                src={imageSrc}
+                alt={title}
+                fill
+                className="rounded-2xl p-2"
+                style={{
+                  objectFit: "fill",
+                  objectPosition: "center",
+                  maxHeight: "100%",
+                  maxWidth: "100%",
+                }}
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col px-4 md:px-0">
-        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+      <div className="flex-1 flex flex-col px-4 md:px-4 max-w-lg">
+        <h3 className="text-2xl md:text-[40px] heading-gradient font-bold text-white mb-4 md:mb-6">
           {title}
         </h3>
-        <p className="text-sm md:text text-gray-300 mb-6 md:mb-8">
+        <p className="text-sm md:text-[18px] text-normal mb-6 md:mb-8 font-['Manrope']">
           {description}
         </p>
 
         <motion.a
           href="#"
-          className="text-white font-medium flex items-center justify-between gap-2 bg-black px-5 md:px-6 py-2.5 md:py-3 rounded-full border-2 border-[#4A6AFE] hover:border-[#4A6AFE]/80 transition-all shadow-[0_0_15px_rgba(74,106,254,0.5)] hover:shadow-[0_0_20px_rgba(74,106,254,0.7)] w-[160px] md:w-[180px]"
+          className="text-white font-medium flex items-center justify-between gap-2 bg-black px md:px-6 py-2.5 md:py-3 rounded-lg border-2 border-[#4B68FE] hover:border-[#4B68FE]/80 transition-all shadow-[0_0_15px_rgba(74,106,254,0.5)] hover:shadow-[0_0_20px_rgba(74,106,254,0.7)] w-[160px] md:w-[180px]"
           whileHover={{ scale: 1.03 }}
         >
           Learn More
@@ -197,15 +218,15 @@ export const FeatureShowcase = () => {
           style={{ animationDelay: "200ms" }}
         >
           {/* Tag label */}
-          <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-gray-800 rounded-full border border-gray-700">
-            <span className="bg-gradient-to-r from-[#4A6AFE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
+          <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
               Built-in Useful Features
             </span>
           </div>
 
           {/* Title in two lines */}
           <div>
-            <h2 className="heading-gradient text-xl md:text-2xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
+            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               Simplify Your Workflow <br className="hidden md:block" />
               <span className="md:hidden">With Our Powerful Tools</span>
               <span className="hidden md:inline">With Our Powerful Tools</span>
@@ -213,7 +234,7 @@ export const FeatureShowcase = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 pt-8 font-['Manrope']">
             Explore the advanced tools designed to streamline your processes,
             <br className="hidden md:block" />
             enhance guest experiences, and drive business growth effectively

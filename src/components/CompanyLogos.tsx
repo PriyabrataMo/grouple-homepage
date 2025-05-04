@@ -63,10 +63,7 @@ export const CompanyLogos = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-full overflow-hidden py-3 sm:py-6 mt-2 mb-4 sm:mb-8">
-      <h4 className="text-center text-gray-400 text-xs sm:text-sm mb-2 sm:mb-4 px-4">
-        Trusted by brands worldwide
-      </h4>
+    <div className="w-full max-w-5xl overflow-hidden py-3 sm:py-6 mt-2 mb-4 sm:mb-8">
       <div
         ref={containerRef}
         className="flex items-center space-x-5 sm:space-x-10 overflow-hidden whitespace-nowrap pt-3 sm:pt-6"
@@ -74,14 +71,14 @@ export const CompanyLogos = () => {
         {allLogos.map((logo, index) => (
           <div
             key={index}
-            className="flex-shrink-0 h-[30px] sm:h-[40px] w-[70px] sm:w-[100px] relative flex items-center justify-center"
+            className="flex-shrink-0 h-[40px] w-[70px] sm:w-[100px] relative flex items-center justify-center"
           >
             <Image
               src={logo}
               alt="Partner logo"
               width={90}
-              height={36}
-              className="max-h-[30px] sm:max-h-[40px] max-w-[70px] sm:max-w-[100px] w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+              height={40}
+              className="max-h-[40px] max-w-[70px] sm:max-w-[100px] w-auto object-contain "
             />
           </div>
         ))}

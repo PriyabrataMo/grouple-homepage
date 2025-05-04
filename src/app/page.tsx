@@ -8,6 +8,7 @@ import Demo from "@/components/Demo";
 import { Faq } from "@/components/Faq";
 import Awards from "@/components/Awards";
 import Venues from "@/components/Venues";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <FeaturePills />
         <Venues />
         <Awards />
+        <Testimonials />
         <Faq />
         <Demo />
       </main>

@@ -7,8 +7,8 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <footer className="bg-black text-white py-10 sm:py-16">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="mx-auto max-w-5xl">
+      <div className="container mx-auto px-4 max-w-full">
+        <div className="mx-auto max-w-full pl-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand Section */}
             <div className="space-y-4">
@@ -68,14 +68,14 @@ export const Footer = () => {
                       Features
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/pricing"
                       className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Pricing
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href="/industries"

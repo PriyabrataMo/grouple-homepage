@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type NavItem = {
   label: string;
@@ -26,19 +27,25 @@ export const Navbar = () => {
   return (
     <header className="w-full max-w-[1440px] mx-auto flex items-center justify-between px-10 py-5 max-md:px-5 max-md:py-[15px] relative z-50">
       <Link href="/" className="flex items-center">
-        <span className="text-[#4A6AFE] font-bold text-2xl">grouple</span>
+        <Image
+          src="/logo.png"
+          alt="Grouple Logo"
+          width={140}
+          height={32}
+          priority
+        />
       </Link>
 
       {/* Desktop Navigation */}
       <nav
-        className="flex items-center gap-8 max-md:hidden"
+        className="flex items-center gap-8 max-md:hidden "
         aria-label="Main navigation"
       >
         {navItems.map((item) => (
           <Link
             key={item.label}
             href={item.href}
-            className="text-white text-base cursor-pointer hover:text-[#4A6AFE] transition-colors"
+            className="text-white text-lg cursor-pointer hover:text-[#4B68FE] transition-colors text-normal"
           >
             {item.label}
           </Link>
@@ -53,27 +60,20 @@ export const Navbar = () => {
         aria-label="Log in"
         className="max-md:hidden"
       >
-        <button className="bg-white text-black px-5 py-2 rounded-full border-solid flex items-center gap-1 font-medium">
+        <button className="bg-[#F2F9FE] text-black px-5 rounded-lg border-solid flex items-center justify-center gap-1 font-[16px] hover:bg-white transition-colors">
           Log in
           <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 md:h-5 md:w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
             <path
-              d="M3 8H13"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M9 4L13 8L9 12"
-              stroke="currentColor"
-              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
+              strokeWidth={2}
+              d="M7 17l8-8M7 9h8v8"
             />
           </svg>
         </button>
@@ -156,7 +156,7 @@ export const Navbar = () => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-white text-lg font-medium hover:text-[#4A6AFE] transition-colors"
+                  className="text-white text-lg font-medium hover:text-[#4B68FE] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   {item.label}
@@ -170,7 +170,7 @@ export const Navbar = () => {
               rel="noopener noreferrer"
               className="block w-full"
             >
-              <button className="w-full bg-white text-black px-5 py-3 rounded-full border-solid flex items-center justify-center gap-2 font-medium">
+              <button className="w-full bg-white text-black px-5 rounded-full border-solid flex items-center justify-center gap-2 font-medium">
                 Log in
                 <svg
                   width="16"
