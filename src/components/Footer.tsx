@@ -62,7 +62,7 @@ export const Footer = () => {
                 <ul className="space-y-2 sm:space-y-3">
                   <li>
                     <Link
-                      href="/features"
+                      href="#features"
                       className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Features
@@ -78,7 +78,7 @@ export const Footer = () => {
                   </li> */}
                   <li>
                     <Link
-                      href="/industries"
+                      href="#industries"
                       className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Industries
@@ -103,7 +103,7 @@ export const Footer = () => {
                 <ul className="space-y-2 sm:space-y-3">
                   <li>
                     <Link
-                      href="/demo"
+                      href="https://grouple.gitbook.io/docs/product-demos/understanding-the-group-booking-journey"
                       className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Demo Video
@@ -111,7 +111,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/why-grouple"
+                      href="https://grouple.gitbook.io/docs"
                       className="text-gray-400 hover:text-white transition text-sm sm:text-base"
                     >
                       Why Grouple

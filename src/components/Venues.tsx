@@ -64,7 +64,10 @@ export default function Venues() {
   }, []);
 
   return (
-    <section className="w-full bg-black text-white py-8 md:py-16">
+    <section
+      id="industries"
+      className="w-full bg-black text-white py-8 md:py-16"
+    >
       <div className="container mx-auto px-4 pt-20">
         <div className="text-center mb-6 md:mb-8">
           <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
@@ -86,48 +89,28 @@ export default function Venues() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          {/* Mobile grid tabs for phones */}
+          {/* Mobile scrollable tabs */}
           {isMobile ? (
-            <div className="grid grid-cols-2 gap-3 mb-6">
-              {venues.map((venue) => (
-                <button
-                  key={venue.name}
-                  onClick={() => setActiveVenue(venue)}
-                  className={cn(
-                    "flex flex-col items-center justify-center p-4 rounded-xl border transition-all duration-200",
-                    activeVenue.name === venue.name
-                      ? "bg-[#292929] border-[#4B68FE] shadow-lg"
-                      : "bg-[#1a1a1a] border-gray-800"
-                  )}
-                  aria-label={`Show ${venue.name} information`}
-                >
-                  <div
-                    className={cn(
-                      "rounded-full p-2.5 mb-2 flex items-center justify-center",
-                      activeVenue.name === venue.name
-                        ? "bg-[#4B68FE]/30"
-                        : "bg-gray-800/30"
-                    )}
-                  >
-                    <Image
-                      src={venue.icon}
-                      alt={`${venue.name} icon`}
-                      width={22}
-                      height={22}
-                    />
-                  </div>
-                  <span
-                    className={cn(
-                      "font-medium text-sm text-center",
-                      activeVenue.name === venue.name
-                        ? "text-white"
-                        : "text-gray-300"
-                    )}
-                  >
-                    {venue.name}
-                  </span>
-                </button>
-              ))}
+            <div className="overflow-x-auto scrollbar-hide pb-4 mb-6" style={{ WebkitOverflowScrolling: 'touch' }}>
+              <div className="flex space-x-3 px-4 min-w-max">
+                <div className="bg-[#191624] rounded-full p-1.5 inline-flex">
+                  {venues.map((venue) => (
+                    <button
+                      key={venue.name}
+                      onClick={() => setActiveVenue(venue)}
+                      className={cn(
+                        "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ease-in-out mx-1 whitespace-nowrap",
+                        activeVenue.name === venue.name
+                          ? "bg-[#2c2938] text-white"
+                          : "text-white hover:bg-[#2c2938]"
+                      )}
+                      aria-label={`Show ${venue.name} information`}
+                    >
+                      {venue.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
             /* Desktop tabs */
@@ -154,14 +137,14 @@ export default function Venues() {
 
           {/* Responsive venue display */}
           <div
-            className="bg-[#161616] rounded-3xl overflow-hidden px-20"
+            className="bg-[#161616] rounded-3xl overflow-hidden"
             style={{
               background: "linear-gradient(to bottom right, #191624, #0a090d)",
             }}
           >
             <div
-              className="flex flex-col md:flex-row pl-10"
-              style={{ height: isMobile ? "auto" : "450px" }}
+              className="flex flex-col md:flex-row md:pl-10"
+              style={{ height: "auto" }}
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -205,7 +188,7 @@ export default function Venues() {
                     {activeVenue.name}
                   </motion.h3>
                   <motion.p
-                    className="text-gray-400 text-sm md:text-base leading-relaxed"
+                    className="text-gray-400 text-sm md:text-base leading-relaxed mb-6 md:mb-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -218,7 +201,8 @@ export default function Venues() {
                   </motion.p>
                 </motion.div>
               </AnimatePresence>
-              <div className="w-full md:w-3/5 h-[250px] md:h-full relative flex items-center justify-center p-0 md:p-4 md:pr-8">
+
+              <div className="w-full md:w-3/5 h-[250px] md:h-[400px] relative flex items-center justify-center p-0 md:p-4 md:pr-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeVenue.name}
@@ -234,7 +218,7 @@ export default function Venues() {
                           src={activeVenue.image}
                           alt={`${activeVenue.name} venue`}
                           fill
-                          sizes="100vw"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           style={{
                             objectFit: "cover",
                             objectPosition: "center",

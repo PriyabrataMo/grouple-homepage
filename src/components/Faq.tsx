@@ -81,17 +81,17 @@ export const Faq = () => {
           </div>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-3">
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {faqItems.map((item, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-0 rounded-lg px-6 overflow-hidden bg-gray-900/30"
+              className="border-0 rounded-lg px-3 sm:px-6 overflow-visible bg-gray-900/30"
             >
-              <AccordionTrigger className="font-jakarta font-medium text-2xl py-4 text-white">
-                {item.question}
+              <AccordionTrigger className="font-jakarta font-medium text-base md:text-lg lg:text-xl py-4 md:py-3 text-white pr-2 hyphens-auto whitespace-normal">
+                <span className="line-clamp-none">{item.question}</span>
               </AccordionTrigger>
-              <AccordionContent className="font-manrope font-normal text-lg text-gray-300">
+              <AccordionContent className="font-manrope font-normal text-sm md:text-base text-gray-300">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

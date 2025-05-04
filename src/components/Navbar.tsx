@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,11 +13,35 @@ type NavItem = {
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Close mobile menu when screen size becomes larger than mobile breakpoint
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [mobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   const navItems: NavItem[] = [
-    { label: "Features", href: "#" },
-    { label: "Industries", href: "#" },
-    { label: "Pricing", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Features", href: "#features" },
+    { label: "Industries", href: "#industries" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const toggleMobileMenu = () => {
@@ -36,16 +60,15 @@ export const Navbar = () => {
         />
       </Link>
 
-      {/* Desktop Navigation */}
       <nav
-        className="flex items-center gap-8 max-md:hidden "
+        className="flex items-center gap-8 max-md:hidden"
         aria-label="Main navigation"
       >
         {navItems.map((item) => (
           <Link
             key={item.label}
             href={item.href}
-            className="text-white text-lg cursor-pointer hover:text-[#4B68FE] transition-colors text-normal"
+            className="text-white text-base cursor-pointer hover:text-[#4A6AFE] transition-colors"
           >
             {item.label}
           </Link>
@@ -60,7 +83,7 @@ export const Navbar = () => {
         aria-label="Log in"
         className="max-md:hidden"
       >
-        <button className="bg-[#F2F9FE] text-black px-5 rounded-lg border-solid flex items-center justify-center gap-1 font-[16px] hover:bg-white transition-colors">
+        <button className="bg-[#F2F9FE] text-black px-5 py-2 rounded-lg border-solid flex items-center justify-center gap-1 font-[16px] hover:bg-white transition-colors">
           Log in
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +179,7 @@ export const Navbar = () => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-white text-lg font-medium hover:text-[#4B68FE] transition-colors"
+                  className="text-white text-lg font-medium hover:text-[#4A6AFE] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   {item.label}
@@ -170,7 +193,7 @@ export const Navbar = () => {
               rel="noopener noreferrer"
               className="block w-full"
             >
-              <button className="w-full bg-white text-black px-5 rounded-full border-solid flex items-center justify-center gap-2 font-medium">
+              <button className="w-full bg-white text-black px-5 py-3 rounded-full border-solid flex items-center justify-center gap-2 font-medium">
                 Log in
                 <svg
                   width="16"

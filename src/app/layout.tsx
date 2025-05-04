@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} ${manrope.variable} antialiased bg-black text-white binary-bg`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

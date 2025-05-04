@@ -211,6 +211,16 @@ body {
     );
   }
 
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
   /* Gradient text from grey to white */
   .heading-gradient {
     background: linear-gradient(to right, #b0b0b0, #f2f9fe);
@@ -230,12 +240,12 @@ body {
   button {
     height: 50px;
   }
-  
+
   /* Binary background pattern */
   .binary-bg {
     position: relative;
   }
-  
+
   .binary-bg::before {
     content: "010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101";
     position: fixed;

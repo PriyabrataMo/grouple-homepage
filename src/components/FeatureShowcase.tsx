@@ -25,20 +25,20 @@ const FeatureItem = ({
     <div
       className={`flex flex-col ${
         isEven ? "md:flex-row" : "md:flex-row-reverse"
-      } gap-8 items-center mb-20 md:mb-32 mt-8 md:mt-16
+      } gap-4 md:gap-8 items-center md:items-start mb-16 md:mb-32 mt-8 md:mt-16
       ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } transition-all duration-1000 ease-out`}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
-      <div className="flex-1 relative flex justify-center mb-6 md:mb-0">
+      <div className="flex-1 relative flex justify-center w-full px-4 md:px-0 mb-6 md:mb-0 self-center md:self-start md:w-1/2">
         <div
-          className="relative w-full md:w-[85%] max-w-[500px] rounded-3xl p-5"
+          className="relative w-full md:w-[90%] max-w-[500px] rounded-3xl p-3 md:p-5 aspect-[4/3] md:aspect-[4/3]"
           style={{
             background: "linear-gradient(to bottom right, #111111, #333333)",
             position: "relative",
             overflow: "hidden",
-            border: "2px solid #000000",
+
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
           }}
         >
@@ -63,18 +63,24 @@ const FeatureItem = ({
               }}
             />
           </motion.div>
-          <div className="w-full h-full overflow-hidden rounded-2xl relative z-10 flex items-center justify-center">
-            <div className="w-full aspect-[526/498] relative flex items-center justify-center">
+          <div
+            className="w-full h-full overflow-hidden rounded-2xl relative z-10 flex items-center justify-center"
+            style={{
+              background:
+                "linear-gradient(145deg, rgba(15,15,15,0.9) 0%, rgba(40,40,40,0.8) 100%)",
+            }}
+          >
+            <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
               <Image
                 src={imageSrc}
                 alt={title}
                 fill
-                className="rounded-2xl p-2"
+                className="rounded-xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{
-                  objectFit: "fill",
                   objectPosition: "center",
-                  maxHeight: "100%",
-                  maxWidth: "100%",
+                  objectFit: "cover",
+                  transform: "scale(1.1)",
                 }}
                 priority
               />
@@ -82,18 +88,21 @@ const FeatureItem = ({
           </div>
         </div>
       </div>
-
-      <div className="flex-1 flex flex-col px-4 md:px-4 max-w-lg">
-        <h3 className="text-2xl md:text-[40px] heading-gradient font-bold text-white mb-4 md:mb-6">
+      <div
+        className={`flex-1 flex flex-col px-4 md:px-10 ${
+          isEven ? "md:pl-8" : "md:pr-4 md:pl-16"
+        } md:w-1/2 pt-2 md:pt-0 self-start`}
+      >
+        <h3 className="text-2xl md:text-[40px] heading-gradient font-bold text-white mb-3 md:mb-6">
           {title}
         </h3>
-        <p className="text-sm md:text-[18px] text-normal mb-6 md:mb-8 font-['Manrope']">
+        <p className="text-base md:text-[18px] text-normal mb-6 md:mb-8 font-['Manrope']">
           {description}
         </p>
 
         <motion.a
           href="#"
-          className="text-white font-medium flex items-center justify-between gap-2 bg-black px md:px-6 py-2.5 md:py-3 rounded-lg border-2 border-[#4B68FE] hover:border-[#4B68FE]/80 transition-all shadow-[0_0_15px_rgba(74,106,254,0.5)] hover:shadow-[0_0_20px_rgba(74,106,254,0.7)] w-[160px] md:w-[180px]"
+          className="text-white font-medium flex items-center justify-between gap-2 bg-black px-4 md:px-6 py-2.5 md:py-3 rounded-lg border-2 border-[#4B68FE] hover:border-[#4B68FE]/80 transition-all shadow-[0_0_15px_rgba(74,106,254,0.5)] hover:shadow-[0_0_20px_rgba(74,106,254,0.7)] w-[160px] md:w-[180px]"
           whileHover={{ scale: 1.03 }}
         >
           Learn More
@@ -181,35 +190,13 @@ export const FeatureShowcase = () => {
     },
   ];
 
-  // Render feature icons next to text
-  //   const renderFeatureWithIcon = (text: string, icon: string) => (
-  //     <div className="flex items-start gap-3 mb-4">
-  //       <div className="mt-1 bg-blue-500/20 p-2 rounded-full">
-  //         <svg
-  //           xmlns="http://www.w3.org/2000/svg"
-  //           className="h-5 w-5 text-blue-500"
-  //           fill="none"
-  //           viewBox="0 0 24 24"
-  //           stroke="currentColor"
-  //         >
-  //           <path
-  //             strokeLinecap="round"
-  //             strokeLinejoin="round"
-  //             strokeWidth={2}
-  //             d="M5 13l4 4L19 7"
-  //           />
-  //         </svg>
-  //       </div>
-  //       <span className="text-gray-300">{text}</span>
-  //     </div>
-  //   );
-
   return (
     <section
-      className="w-full flex flex-col items-center py-16 md:py-28 bg-black text-white overflow-hidden"
+      id="features"
+      className="w-full flex flex-col items-center py-12 md:py-28 bg-black text-white overflow-hidden"
       ref={featuresRef}
     >
-      <div className="container px-4 mx-auto">
+      <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         {/* Header with tag and title in two lines */}
         <div
           className={`text-center mb-8 md:mb-16 ${
@@ -225,24 +212,22 @@ export const FeatureShowcase = () => {
           </div>
 
           {/* Title in two lines */}
-          <div>
-            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
-              Simplify Your Workflow <br className="hidden md:block" />
-              <span className="md:hidden">With Our Powerful Tools</span>
-              <span className="hidden md:inline">With Our Powerful Tools</span>
+          <div className="px-3 sm:px-4">
+            <h2 className="heading-gradient text-3xl md:text-[54px] lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
+              Simplify Your Workflow{" "}
+              <span className="block md:inline">With Our Powerful Tools</span>
             </h2>
           </div>
 
           {/* Subtitle */}
-          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 pt-8 font-['Manrope']">
+          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-3 sm:px-4 pt-4 md:pt-8 font-['Manrope']">
             Explore the advanced tools designed to streamline your processes,
-            <br className="hidden md:block" />
             enhance guest experiences, and drive business growth effectively
           </p>
         </div>
 
         {/* Feature items */}
-        <div className="mt-12 md:mt-20">
+        <div className="mt-10 md:mt-20">
           {features.map((feature, index) => (
             <FeatureItem
               key={index}
