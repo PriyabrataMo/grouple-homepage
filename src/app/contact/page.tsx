@@ -32,7 +32,32 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // Validate form data
+      // Validate subject and message length before parsing
+      if (formData.subject.length < 2) {
+        toast.error("Subject must be at least 2 characters");
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (formData.subject.length > 100) {
+        toast.error("Subject cannot exceed 100 characters");
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (formData.message.length < 100) {
+        toast.error("Message must be at least 100 characters");
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (formData.message.length > 2000) {
+        toast.error("Message cannot exceed 2000 characters");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Validate form data with Zod
       const validatedData = FeedbackSchema.parse(formData);
 
       // Honeypot check
@@ -62,9 +87,11 @@ export default function ContactPage() {
         honeypot: "",
       });
     } catch (error) {
-      // const message =
-      // error instanceof Error ? error.message : "Failed to send message";
-      // toast.error(message);
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("Failed to send message");
+      }
       console.log(error);
     } finally {
       setIsSubmitting(false);

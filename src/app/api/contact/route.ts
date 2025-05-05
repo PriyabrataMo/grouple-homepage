@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: ["priyabrata8558@gmail.com"],
+      to: ["rohit@grouple.in", "priyabrata8558@gmail.com"],
       subject: `Grouple: New Contact Form Submission from ${name}`,
       html: `
                 <h2>New Message Received</h2>
