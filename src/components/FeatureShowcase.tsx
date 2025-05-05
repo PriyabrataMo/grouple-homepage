@@ -33,7 +33,7 @@ const FeatureItem = ({
     >
       <div className="flex-1 relative flex justify-center w-full px-4 md:px-0 mb-6 md:mb-0 self-center md:self-start md:w-1/2">
         <div
-          className="relative w-full md:w-[90%] max-w-[500px] rounded-3xl p-3 md:p-5 aspect-[4/3] md:aspect-[4/3]"
+          className="relative w-full md:w-[100%] max-w-[500px] rounded-3xl p-3 md:p-5 aspect-[472/447] md:aspect-[472/447]"
           style={{
             background: "linear-gradient(to bottom right, #111111, #333333)",
             position: "relative",
@@ -214,7 +214,7 @@ export const FeatureShowcase = () => {
           {/* Title in two lines */}
           <div className="px-3 sm:px-4">
             <h2 className="heading-gradient text-3xl md:text-[54px] lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
-              Simplify Your Workflow{" "}
+              Simplify Your Workflow <br />
               <span className="block md:inline">With Our Powerful Tools</span>
             </h2>
           </div>

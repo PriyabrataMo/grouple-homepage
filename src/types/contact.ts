@@ -10,10 +10,10 @@ export const FeedbackSchema = z.object({
     .string()
     .min(2, { message: "Subject is required" })
     .max(100, { message: "Subject cannot exceed 100 characters" }),
-  feedback: z
+  message: z
     .string()
-    .min(100, { message: "Feedback must be at least 100 characters" })
-    .max(2000, { message: "Feedback cannot exceed 2000 characters" }),
+    .min(100, { message: "Message must be at least 100 characters" })
+    .max(2000, { message: "Message cannot exceed 2000 characters" }),
   honeypot: z.string().max(0, { message: "Bot detected" }).optional(),
 });
 
