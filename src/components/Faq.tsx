@@ -66,7 +66,7 @@ export const Faq = () => {
   ];
 
   return (
-    <section className="w-full py-24 flex justify-center bg-black">
+    <section className="w-full py-2 md:py-24 flex justify-center bg-black">
       <div className="w-full max-w-6xl px-4 mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">

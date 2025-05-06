@@ -106,13 +106,13 @@ export default function ContactPage() {
           <div
             className="flex-1 text-center relative pb-15 "
             style={{
-              backgroundImage: "url('/background/nextbg.jpeg')",
+              backgroundImage: "url('/background/chatbg.jpeg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="pt-10 md:px-4 px-8">
+            <div className="pt-30 md:px-4 px-8">
               <div className="inline-block mb-4 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
                 <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
                   We&apos;re Here For You
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full font-['Manrope'] text-sm md:text-[16px] bg-[#191624] border border-gray-800 rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full font-['Manrope'] text-sm md:text-[16px] bg-[#191624]  rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full bg-[#191624] font-['Manrope'] text-sm md:text-[16px] border border-gray-800 rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full bg-[#191624] font-['Manrope'] text-sm md:text-[16px]  rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                         required
                       />
                       <input
@@ -182,7 +182,7 @@ export default function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full bg-[#191624] border font-['Manrope'] text-sm md:text-[16px] border-gray-800 rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full bg-[#191624]  font-['Manrope'] text-sm md:text-[16px]  rounded-xl p-4 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                         required
                       />
                     </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full bg-[#191624] border font-['Manrope'] text-sm md:text-[16px] border-gray-800 rounded-xl p-4 resize-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full bg-[#191624]  font-['Manrope'] text-sm md:text-[16px]  rounded-xl p-4 resize-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
 
@@ -212,7 +212,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Contact Information - Enhanced for mobile */}
-                <div className="flex-1 px-5 sm:px-6 md:px-8 py-7 md:py-8 border-t md:border-t-0 md:border-l border-gray-800 bg-[#14111c]/50">
+                <div className="flex-1 px-5 sm:px-6 md:px-8 py-7 md:py-8 bg-[#14111c]/50">
                   <h3 className="text-xl sm:text-2xl md:text-[32px] heading-gradient font-bold mb-5 md:mb-6">
                     Contact Information
                   </h3>

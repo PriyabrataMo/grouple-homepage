@@ -91,7 +91,10 @@ export default function Venues() {
         <div className="max-w-7xl mx-auto">
           {/* Mobile scrollable tabs */}
           {isMobile ? (
-            <div className="overflow-x-auto scrollbar-hide pb-4 mb-6" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <div
+              className="overflow-x-auto scrollbar-hide pb-4 mb-6"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
               <div className="flex space-x-3 px-4 min-w-max">
                 <div className="bg-[#191624] rounded-full p-1.5 inline-flex">
                   {venues.map((venue) => (

@@ -174,6 +174,37 @@ export const Navbar = () => {
             className="absolute top-[70px] left-0 right-0 bg-[#111] p-5 border-t border-gray-800"
             onClick={(e) => e.stopPropagation()}
           >
+            <div className="flex justify-end mb-6">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-white p-2"
+                aria-label="Close mobile menu"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6L6 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M6 6L18 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
             <nav className="flex flex-col gap-6 mb-8">
               {navItems.map((item) => (
                 <Link

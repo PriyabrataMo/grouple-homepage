@@ -152,10 +152,9 @@ const Demo = () => {
       <div className="w-full px-4 mx-auto pt-10 flex justify-center">
         {/* Background container with 3D effect and border */}
         <div
-          className="relative rounded-4xl overflow-hidden"
+          className="relative rounded-4xl overflow-hidden h-[500px] md:h-[617px]"
           style={{
             width: "1080px",
-            height: "617px",
             maxWidth: "100%",
             transform: "perspective(1000px) rotateX(2deg)",
             transformStyle: "preserve-3d",
@@ -199,14 +198,14 @@ const Demo = () => {
 
           {/* Content - with subtle 3D transform - increased z-index from 20 to 25 */}
           <div
-            className="relative z-25 h-full pt-25 flex flex-col items-center justify-center text-center px-4"
+            className="relative z-25 pt-15 md:pt-25 flex flex-col items-center justify-center text-center px-4"
             style={{
               transform: "translateZ(20px)",
               textShadow: "0 2px 10px rgba(0,0,0,0.5)",
               zIndex: 25,
             }}
           >
-            <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <div className="inline-block mb-4 md:mb-6 px-3 md:px-4  md:py-2 bg-[#191624] rounded-full border border-gray-700">
               <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
                 We&apos;ve Released a New Feature
               </span>
