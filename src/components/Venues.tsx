@@ -140,7 +140,7 @@ export default function Venues() {
 
           {/* Responsive venue display */}
           <div
-            className="bg-[#161616] rounded-3xl overflow-hidden"
+            className="bg-[#161616] rounded-[48] overflow-hidden"
             style={{
               background: "linear-gradient(to bottom right, #191624, #0a090d)",
             }}
@@ -205,7 +205,7 @@ export default function Venues() {
                 </motion.div>
               </AnimatePresence>
 
-              <div className="w-full md:w-3/5 h-[300px] md:h-[400px] relative flex items-center justify-center p-0 md:p-4 md:pr-8">
+              <div className="w-full md:w-3/5 h-[300px] md:h-[400px] relative flex items-center justify-center p-4 md:p-4 md:pr-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeVenue.name}
@@ -216,7 +216,7 @@ export default function Venues() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     {isMobile ? (
-                      <div className="h-[258px] w-[332px] max-w-[500px] rounded-4xl p-5 bg-[#242426]">
+                      <div className="h-[258px] w-[332px] max-w-[500px] rounded-[32] p-5 bg-[#242426]">
                         <div className="w-full h-full">
                           <Image
                             src={activeVenue.image}
@@ -229,7 +229,7 @@ export default function Venues() {
                               objectFit: "cover",
                               objectPosition: "center",
                             }}
-                            className="rounded-2xl"
+                            className="rounded-[24]"
                             priority
                           />
                         </div>
