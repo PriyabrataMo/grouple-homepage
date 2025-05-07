@@ -68,7 +68,7 @@ export default function Venues() {
       id="industries"
       className="w-full bg-black text-white py-8 md:py-16"
     >
-      <div className="container mx-auto px-4 pt-20">
+      <div className="container mx-auto  pt-20">
         <div className="text-center mb-6 md:mb-8">
           <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
             <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
@@ -205,7 +205,7 @@ export default function Venues() {
                 </motion.div>
               </AnimatePresence>
 
-              <div className="w-full md:w-3/5 h-[250px] md:h-[400px] relative flex items-center justify-center p-0 md:p-4 md:pr-8">
+              <div className="w-full md:w-3/5 h-[300px] md:h-[400px] relative flex items-center justify-center p-0 md:p-4 md:pr-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeVenue.name}
@@ -216,19 +216,23 @@ export default function Venues() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     {isMobile ? (
-                      <div className="w-full h-full">
-                        <Image
-                          src={activeVenue.image}
-                          alt={`${activeVenue.name} venue`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          style={{
-                            objectFit: "cover",
-                            objectPosition: "center",
-                          }}
-                          className="rounded-b-3xl"
-                          priority
-                        />
+                      <div className="h-[258px] w-[332px] max-w-[500px] rounded-4xl p-5 bg-[#242426]">
+                        <div className="w-full h-full">
+                          <Image
+                            src={activeVenue.image}
+                            alt={`${activeVenue.name} venue`}
+                            width={441}
+                            height={334}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
+                            className="rounded-2xl"
+                            priority
+                          />
+                        </div>
                       </div>
                     ) : (
                       <div className="h-[374px] w-[481px] max-w-[500px] rounded-2xl p-5 bg-[#242426]">

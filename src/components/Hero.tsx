@@ -42,15 +42,17 @@ export const Hero = () => {
         Drive revenue and streamline group and private bookings
       </p>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md">
-        <button
-          className="cursor-pointer bg-[#4B68FE] rounded-lg text-white font-medium hover:bg-[#4B68FE]/90 transition-colors flex items-center justify-center w-full py-3 sm:py-2.5 text-sm sm:text-base"
-          aria-label="Book A Free Demo"
-          onClick={() =>
-            window.open("https://calendly.com/rohit-grouple", "_blank")
-          }
-        >
-          Book A Free Demo
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md justify-center items-center">
+          <button
+            className="cursor-pointer bg-[#4B68FE] rounded-lg text-white font-medium hover:bg-[#4B68FE]/90 transition-colors flex items-center justify-center w-fit px-5 py-3 sm:py-2.5 text-sm sm:text-base"
+            aria-label="Book A Free Demo"
+            onClick={() =>
+              window.open("https://calendly.com/rohit-grouple", "_blank")
+            }
+          >
+            Book A Free Demo
+          </button>
+        </div>
 
         <button
           className="cursor-pointer bg-transparent text-white px-4 sm:px-5 rounded-full font-medium transition-all flex items-center justify-center gap-1.5 sm:gap-2 w-full group py-3 sm:py-2.5 text-sm sm:text-base"

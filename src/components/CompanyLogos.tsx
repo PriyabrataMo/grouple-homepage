@@ -31,7 +31,7 @@ export const CompanyLogos = () => {
     let scrollPosition = 0;
     // Adjust scroll speed based on screen width for better mobile experience
     const isMobile = window.innerWidth < 768;
-    const scrollSpeed = isMobile ? 0.3 : 0.5; // Slower on mobile
+    const scrollSpeed = isMobile ? 0.5 : 0.5; // Slower on mobile
 
     const scroll = () => {
       if (!container) return;

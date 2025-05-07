@@ -146,7 +146,7 @@ export default function ContactPage() {
                 }}
               >
                 {/* Contact Form */}
-                <div className="flex-1 px-5 sm:px-6 md:px-8 py-7 md:py-8">
+                <div className="flex-1 px-5 sm:px-6 md:px-8 py-30 md:py-30">
                   <form
                     onSubmit={handleSubmit}
                     className="space-y-5 md:space-y-6"
@@ -212,18 +212,18 @@ export default function ContactPage() {
                 </div>
 
                 {/* Contact Information - Enhanced for mobile */}
-                <div className="flex-1 px-5 sm:px-6 md:px-8 py-7 md:py-8 bg-[#14111c]/50">
-                  <h3 className="text-xl sm:text-2xl md:text-[32px] heading-gradient font-bold mb-5 md:mb-6">
+                <div className="flex-1 text-left px-5 sm:px-6 md:px-8 py-7 md:py-8 ">
+                  <h3 className="text-xl sm:text-24 md:text-[24px] heading-gradient font-bold mb-5 md:mb-6">
                     Contact Information
                   </h3>
-                  <p className="font-['Manrope'] text-sm md:text-[18px] text-gray-400 mb-8 md:mb-10">
+                  <p className="font-['Manrope'] pt-10 text-[18px] md:text-[18px] text-gray-400 mb-8 md:mb-10">
                     Contact us. Your feedback matters. Let&apos;s build a better
                     future together.
                   </p>
 
                   <div className="space-y-7 md:space-y-8 text-left">
-                    <div className="bg-[#191624]/40 p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
-                      <div className="flex items-center gap-3 mb-2">
+                    <div className="p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
+                      <div className="flex items-center gap-1 mb-2">
                         <div className="bg-[#242133] p-2 rounded-full">
                           <svg
                             className="w-5 h-5 md:w-6 md:h-6 text-green-400"
@@ -239,16 +239,16 @@ export default function ContactPage() {
                             />
                           </svg>
                         </div>
-                        <h2 className="font-semibold font-['Manrope'] text-base md:text-xl text-white">
+                        <h2 className="font-semibold text-[20px] font-['Manrope'] text-base md:text-xl text-white">
                           Head Office
                         </h2>
                       </div>
-                      <p className="text-sm md:text-[18px] text-gray-400 font-['Manrope'] ml-10">
+                      <p className="text-[18px] text-gray-400 font-['Manrope'] ml-10">
                         33 London St, Reading RG1 4PS, United Kingdom
                       </p>
                     </div>
 
-                    <div className="bg-[#191624]/40 p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
+                    <div className="p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="bg-[#242133] p-2 rounded-full">
                           <svg
@@ -265,16 +265,16 @@ export default function ContactPage() {
                             />
                           </svg>
                         </div>
-                        <h2 className="font-semibold font-['Manrope'] text-base md:text-xl text-white">
+                        <h2 className="font-semibold text-[20px] font-['Manrope'] text-base md:text-xl text-white">
                           Phone
                         </h2>
                       </div>
-                      <p className="text-sm md:text-[18px] text-gray-400 font-['Manrope'] ml-10">
+                      <p className="text-[18px] text-gray-400 font-['Manrope'] ml-10">
                         +44 118 950 3925
                       </p>
                     </div>
 
-                    <div className="bg-[#191624]/40 p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
+                    <div className="p-4 rounded-xl shadow-sm transform transition-transform hover:scale-[1.02] duration-300">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="bg-[#242133] p-2 rounded-full">
                           <svg
@@ -291,11 +291,11 @@ export default function ContactPage() {
                             />
                           </svg>
                         </div>
-                        <h2 className="font-semibold font-['Manrope'] text-base md:text-xl text-white">
+                        <h2 className="text-[20px] font-semibold font-['Manrope'] text-base md:text-xl text-white">
                           Email
                         </h2>
                       </div>
-                      <p className="text-sm md:text-[18px] text-gray-400 font-['Manrope'] ml-10">
+                      <p className="md:text-[18px] text-gray-400 font-['Manrope'] ml-10">
                         hello@grouple.in
                       </p>
                     </div>

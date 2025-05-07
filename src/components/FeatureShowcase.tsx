@@ -70,7 +70,7 @@ const FeatureItem = ({
                 "linear-gradient(145deg, rgba(15,15,15,0.9) 0%, rgba(40,40,40,0.8) 100%)",
             }}
           >
-            <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
+            {/* <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
               <Image
                 src={imageSrc}
                 alt={title}
@@ -81,6 +81,22 @@ const FeatureItem = ({
                   objectPosition: "center",
                   objectFit: "cover",
                   transform: "scale(1.1)",
+                }}
+                priority
+              />
+            </div> */}
+
+            <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
+              <Image
+                src={imageSrc}
+                alt={title}
+                fill
+                className="rounded-xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{
+                  objectPosition: "center",
+                  objectFit: "contain", // Changed from "cover" to "contain"
+                  transform: "none", // Removed scale to prevent zooming in
                 }}
                 priority
               />
