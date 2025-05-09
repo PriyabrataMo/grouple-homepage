@@ -150,8 +150,9 @@ export const Testimonials = () => {
           {/* Description Section */}
           <div className="md:max-w-md">
             <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 pt-8 font-['Manrope']">
-              Hear from satisfied customers who've transformed their businesses.
-              Real experiences, real results - see what's possible with us.
+              Hear from satisfied customers who&apos;ve transformed their
+              businesses. Real experiences, real results - see what&apos;s
+              possible with us.
             </p>
           </div>
         </div>
