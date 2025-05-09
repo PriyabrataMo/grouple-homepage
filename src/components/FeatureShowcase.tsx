@@ -11,12 +11,14 @@ const FeatureItem = ({
   index,
   isVisible,
   imageSrc,
+  icon,
 }: {
   title: string;
   description: string;
   index: number;
   isVisible: boolean;
   imageSrc: string;
+  icon: string;
 }) => {
   // Alternate layout for even/odd indexes
   const isEven = index % 2 === 0;
@@ -38,7 +40,6 @@ const FeatureItem = ({
             background: "linear-gradient(to bottom right, #111111, #333333)",
             position: "relative",
             overflow: "hidden",
-
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
           }}
         >
@@ -70,22 +71,6 @@ const FeatureItem = ({
                 "linear-gradient(145deg, rgba(15,15,15,0.9) 0%, rgba(40,40,40,0.8) 100%)",
             }}
           >
-            {/* <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
-              <Image
-                src={imageSrc}
-                alt={title}
-                fill
-                className="rounded-xl"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{
-                  objectPosition: "center",
-                  objectFit: "cover",
-                  transform: "scale(1.1)",
-                }}
-                priority
-              />
-            </div> */}
-
             <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
               <Image
                 src={imageSrc}
@@ -95,8 +80,8 @@ const FeatureItem = ({
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{
                   objectPosition: "center",
-                  objectFit: "contain", // Changed from "cover" to "contain"
-                  transform: "none", // Removed scale to prevent zooming in
+                  objectFit: "contain",
+                  transform: "none",
                 }}
                 priority
               />
@@ -109,6 +94,17 @@ const FeatureItem = ({
           isEven ? "md:pl-8" : "md:pr-4 md:pl-16"
         } md:w-1/2 pt-2 md:pt-0 self-start`}
       >
+        <div className="mb-4 py-2 md:py-6">
+          <div className="bg-white items-center rounded-full p-2 inline-flex items-center justify-center w-16 h-16">
+            <Image
+              src={icon}
+              alt={`${title} icon`}
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+          </div>
+        </div>
         <h3 className="text-2xl md:text-[40px] heading-gradient font-bold text-white mb-3 md:mb-6">
           {title}
         </h3>
@@ -173,35 +169,35 @@ export const FeatureShowcase = () => {
       title: "Increase Group Sales",
       description:
         "Easily combine multiple offerings into tailored packages for your guests. Our intuitive dashboard helps you manage bundled products and services from a single place, enabling smarter and faster business decisions that drive more revenue.",
-      icon: "chart-bar",
+      icon: "/features/icons/1.svg",
       imageSrc: "/features/1.svg",
     },
     {
       title: "Add Upsells Opportunities",
       description:
         "Offer optional extras like premium alcohol, hookah, special seating, or birthday cakes, right from the booking interface. Let guests personalize their experience while you increase your per-booking value effortlessly.",
-      icon: "trending-up",
+      icon: "/features/icons/2.svg",
       imageSrc: "/features/2.svg",
     },
     {
       title: "Offer Dynamic Pricing",
       description:
         "Adapt your pricing in real-time based on demand, special occasions, or guest preferences. Collaborate effortlessly with your team to optimize rates, maximize profits, and deliver personalized experiences no matter where you are.",
-      icon: "dollar-sign",
+      icon: "/features/icons/3.svg",
       imageSrc: "/features/3.svg",
     },
     {
       title: "Seamless Lead Generation",
       description:
         "Grouple captures rich, actionable lead data including guest count, preferences, package selection, and upsell choices, all structured and ready for your team to convert faster. No missed inquiries. No manual follow-ups.",
-      icon: "users",
+      icon: "/features/icons/4.svg",
       imageSrc: "/features/4.svg",
     },
     {
       title: "Instant Scheduling Manager",
       description:
         "Manage bookings, prioritize tasks, and track progress all in real-time. Our intelligent scheduling dashboard helps you organize operations more efficiently, boost team productivity, and create seamless guest experiences every day.",
-      icon: "calendar",
+      icon: "/features/icons/5.svg",
       imageSrc: "/features/5.svg",
     },
   ];
@@ -254,6 +250,7 @@ export const FeatureShowcase = () => {
               index={index}
               isVisible={isVisible}
               imageSrc={feature.imageSrc}
+              icon={feature.icon}
             />
           ))}
         </div>
