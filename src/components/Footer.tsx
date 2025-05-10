@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <footer className="bg-black text-white py-10 sm:py-16">
-      <div className="container mx-auto px-4 max-w-full">
+      <div className="container mx-auto px-10 md:px-4 max-w-full">
         <div className="mx-auto max-w-full pl-0 sm:pl-10">
           {/* Mobile version (matches the image) */}
           <div className="block sm:hidden">
@@ -182,23 +182,16 @@ export const Footer = () => {
                   <ul className="space-y-2 sm:space-y-3">
                     <li>
                       <Link
-                        href="#features"
+                        href="/#features"
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
                         Features
                       </Link>
                     </li>
+
                     <li>
                       <Link
-                        href="/pricing"
-                        className="text-white font-[manrope] hover:text-white transition text-lg"
-                      >
-                        Pricing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#industries"
+                        href="/#industries"
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
                         Industries
@@ -235,6 +228,14 @@ export const Footer = () => {
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
                         Why Grouple
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://info.grouple.in/blog"
+                        className="text-white font-[manrope] hover:text-white transition text-lg"
+                      >
+                        Blogs
                       </Link>
                     </li>
                   </ul>

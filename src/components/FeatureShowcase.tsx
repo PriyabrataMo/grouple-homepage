@@ -35,7 +35,7 @@ const FeatureItem = ({
     >
       <div className="flex-1 relative flex justify-center w-full px-4 md:px-0 mb-6 md:mb-0 self-center md:self-start md:w-1/2">
         <div
-          className="relative w-full md:w-[100%] max-w-[500px] rounded-3xl p-3 md:p-5 aspect-[472/447] md:aspect-[472/447]"
+          className="relative w-full md:w-[100%] max-w-[500px] rounded-[24px] p-3 md:p-5 aspect-[472/447] md:aspect-[472/447]"
           style={{
             background: "linear-gradient(to bottom right, #111111, #333333)",
             position: "relative",
@@ -44,11 +44,11 @@ const FeatureItem = ({
           }}
         >
           <motion.div
-            className="absolute inset-0 z-0 rounded-3xl"
+            className="absolute inset-0 z-0 rounded-[24px]"
             style={{ padding: "1px" }}
           >
             <motion.div
-              className="light-border w-full h-full absolute rounded-3xl"
+              className="light-border w-full h-full absolute rounded-[24px]"
               animate={{
                 backgroundPosition: ["0% 0%", "200% 0%"],
               }}
@@ -65,22 +65,22 @@ const FeatureItem = ({
             />
           </motion.div>
           <div
-            className="w-full h-full overflow-hidden rounded-2xl relative z-10 flex items-center justify-center"
+            className="w-full h-full overflow-hidden rounded-[18px] relative z-10 flex items-center justify-center"
             style={{
               background:
                 "linear-gradient(145deg, rgba(15,15,15,0.9) 0%, rgba(40,40,40,0.8) 100%)",
             }}
           >
-            <div className="w-[100%] h-[100%] relative rounded-xl overflow-hidden flex items-center justify-center">
+            <div className="w-[100%] h-[100%] relative rounded-[18px] overflow-hidden flex items-center justify-center">
               <Image
                 src={imageSrc}
                 alt={title}
                 fill
-                className="rounded-xl"
+                className="rounded-[18px]"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{
                   objectPosition: "center",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   transform: "none",
                 }}
                 priority
