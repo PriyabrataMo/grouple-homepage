@@ -182,7 +182,7 @@ export const Footer = () => {
                   <ul className="space-y-2 sm:space-y-3">
                     <li>
                       <Link
-                        href="/#features"
+                        href="/features"
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
                         Features

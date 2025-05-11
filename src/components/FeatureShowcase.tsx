@@ -113,7 +113,7 @@ const FeatureItem = ({
         </p>
 
         <motion.a
-          href="#"
+          href="/features"
           className="text-white font-medium flex items-center justify-between gap-2 bg-black px-4 md:px-6 py-2.5 md:py-3 rounded-lg border-2 border-[#4B68FE] hover:border-[#4B68FE]/80 transition-all shadow-[0_0_15px_rgba(74,106,254,0.5)] hover:shadow-[0_0_20px_rgba(74,106,254,0.7)] w-[160px] md:w-[180px]"
           whileHover={{ scale: 1.03 }}
         >
