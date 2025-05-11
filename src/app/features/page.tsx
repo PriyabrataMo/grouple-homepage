@@ -333,7 +333,7 @@ export default function FeaturesPage() {
 
             <div className="relative pt-10 sm:pt-14 md:pt-10 w-full overflow-hidden px-2 sm:px-4 md:px-0">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/30598103c057f77e1782adc8ded47aff0365c9c6?placeholderIfAbsent=true"
+                src="featurePage/featurePng.png"
                 alt="Platform Interface on Tablet"
                 className="w-full max-w-6xl h-auto rounded-md sm:rounded-lg mx-auto shadow-lg"
                 loading="eager"

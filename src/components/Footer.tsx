@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 sm:py-16">
-      <div className="container mx-auto px-10 md:px-4 max-w-full">
-        <div className="mx-auto max-w-full pl-0 sm:pl-10">
+    <footer className="bg-black text-white py-10 px-10 md:px-4 sm:py-16">
+      <div className="container mx-auto  max-w-full">
+        <div className="mx-auto max-w-full  ">
           {/* Mobile version (matches the image) */}
           <div className="block sm:hidden">
             <div className="space-y-5">
