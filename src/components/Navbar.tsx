@@ -41,8 +41,8 @@ export const Navbar = () => {
   const navItems: NavItem[] = [
     { label: "Features", href: "/features" },
     { label: "Industries", href: "/#industries" },
-    { label: "Contact", href: "/contact" },
     { label: "Blogs", href: "https://info.grouple.in/blog" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const toggleMobileMenu = () => {
