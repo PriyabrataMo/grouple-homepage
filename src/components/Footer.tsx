@@ -245,7 +245,7 @@ export const Footer = () => {
           </div>
 
           {/* Copyright and Social Links */}
-          <div className="border-t border-[#F2F9FE] mt-10 sm:mt-16 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="border-t border-[#242426] mt-10 sm:mt-16 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center">
             <div className="text-gray-500 text-xs sm:text-sm">
               2025 Grouple. All rights reserved
             </div>
