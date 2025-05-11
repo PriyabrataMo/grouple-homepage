@@ -222,7 +222,7 @@ export default function FeaturesPage() {
     },
   ];
   return (
-    <section className="flex flex-1 flex-col  max-w-full">
+    <section className="flex flex-1 flex-col bg-black  max-w-full">
       <Navbar />
       <div className="flex flex-1 flex-col items-center px-6 sm:px-10 max-w-[1440px] mx-auto w-full">
         <div
