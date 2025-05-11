@@ -331,7 +331,7 @@ export default function FeaturesPage() {
               enhance productivity, and drive business growth effectively
             </p>
 
-            <div className="relative pt-10 sm:pt-14 md:pt-10 w-full overflow-hidden px-2 sm:px-4 md:px-0">
+            <div className="relative pt-10 sm:pt-14 md:pt-10 w-5xl overflow-hidden px-2 sm:px-4 md:px-0">
               <img
                 src="featurePage/featurePng.png"
                 alt="Platform Interface on Tablet"
