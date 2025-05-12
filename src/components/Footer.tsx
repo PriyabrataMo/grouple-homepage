@@ -278,7 +278,7 @@ export const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/grouple_in"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
