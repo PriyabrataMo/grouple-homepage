@@ -97,6 +97,14 @@ export const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <Link
+                      href="https://info.grouple.in/blog"
+                      className="text-white font-[manrope] hover:text-white transition text-lg"
+                    >
+                      Blogs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="https://grouple.gitbook.io/docs/product-demos/understanding-the-group-booking-journey"
                       className="text-white font-[manrope] text-lg hover:text-white transition text-base"
                     >
@@ -109,14 +117,6 @@ export const Footer = () => {
                       className="text-white font-[manrope] text-lg hover:text-white transition text-base"
                     >
                       Why Grouple
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://info.grouple.in/blog"
-                      className="text-white font-[manrope] hover:text-white transition text-lg"
-                    >
-                      Blogs
                     </Link>
                   </li>
                 </ul>
@@ -217,6 +217,14 @@ export const Footer = () => {
                   <ul className="space-y-2 sm:space-y-3">
                     <li>
                       <Link
+                        href="https://info.grouple.in/blog"
+                        className="text-white font-[manrope] hover:text-white transition text-lg"
+                      >
+                        Blogs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         href="https://grouple.gitbook.io/docs/product-demos/understanding-the-group-booking-journey"
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
@@ -229,14 +237,6 @@ export const Footer = () => {
                         className="text-white font-[manrope] hover:text-white transition text-lg"
                       >
                         Why Grouple
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="https://info.grouple.in/blog"
-                        className="text-white font-[manrope] hover:text-white transition text-lg"
-                      >
-                        Blogs
                       </Link>
                     </li>
                   </ul>
