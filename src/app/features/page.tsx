@@ -290,7 +290,7 @@ export default function FeaturesPage() {
             </div>
           </section>
           <FeaturePills />
-          <section className="flex flex-col pt-30 items-center text-center mb-8 sm:mb-12 px-4">
+          <section className="flex flex-col pt-30 items-center text-center mb-8 sm:mb-12 px-2 md:px-4">
             {/* <div className="bg-[#1C1C1C] rounded-full py-1 px-2.5 sm:px-3 flex items-center gap-1.5 sm:gap-2 mb-4 sm:mb-6 text-xs sm:text-sm">
         <span className="bg-[#4B68FE] text-white text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-[2px] rounded-full">
           NEW
@@ -315,12 +315,12 @@ export default function FeaturesPage() {
           />
         </svg>
       </div> */}
-            <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <div className="inline-block mb-4 md:mb-6  md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
               <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
                 Features You&apos;ll Need
               </span>
             </div>
-            <h1 className="heading-gradient text-[26px] md:text-[64px] font-[650] mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-[-1px] sm:tracking-[-2px]">
+            <h1 className="heading-gradient text-[36px] md:text-[64px] font-bold mb-3 sm:mb-4 md:mb-6 leading-tight md:px-2 tracking-[-1px] sm:tracking-[-2px]">
               One Platform,
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
