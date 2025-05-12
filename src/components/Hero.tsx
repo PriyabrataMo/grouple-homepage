@@ -32,13 +32,13 @@ export const Hero = () => {
       <div className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 md:mb-10 text-[#bobobo] max-w-xl px-2 tracking-widest pt-6 sm:pt-10">
         FOR HOSPITALITY VENUES
       </div>
-      <h1 className="heading-gradient text-2xl xs:text-3xl sm:text-4xl md:text-[64px] font-[650] mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-[-1px] sm:tracking-[-2px]">
+      <h1 className="heading-gradient text-[36px]  md:text-[64px] font-[650] mb-3 sm:mb-4 md:mb-6 leading-tight px-4 md:px-2 tracking-[-1px] sm:tracking-[-2px]">
         Your Concierge Style
         <br className="hidden sm:block" />
         <span className="sm:hidden"> </span>
         Group Booking Platform!
       </h1>
-      <p className="text-base sm:text-[18px] mb-5 sm:mb-6 md:mb-10 text-[#bobobo] max-w-xl px-2 font-['Manrope']">
+      <p className="text-base sm:text-[18px] pt-2 mb-5 sm:mb-6 md:mb-10 text-[#b0b0b0] font-['Manrope']">
         Drive revenue and streamline group and private bookings
       </p>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md">
@@ -60,24 +60,24 @@ export const Hero = () => {
           onClick={() => {
             const modal = document.createElement("div");
             modal.className =
-              "fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4";
+              "fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4";
             modal.innerHTML = `
-              <div class="relative w-full max-w-3xl mx-auto">
-          <button class="absolute -top-8 sm:-top-10 right-0 text-white hover:text-gray-300 p-2 touch-manipulation">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
-          <div class="relative pb-[56.25%] h-0">
-            <iframe 
-              class="absolute top-0 left-0 w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/603RFvU3Uz0?autoplay=1" 
-              title="Product Video"
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
+              <div class="relative w-full max-w-[80%] mx-auto">
+                <button class="absolute -top-8 sm:-top-10 right-0 text-white hover:text-gray-300 p-2 touch-manipulation">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <div class="relative pb-[56.25%] h-0">
+                  <iframe 
+                    class="absolute top-0 left-0 w-full h-full rounded-lg"
+                    src="https://www.youtube.com/embed/603RFvU3Uz0?autoplay=1" 
+                    title="Product Video"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                  </iframe>
+                </div>
               </div>
             `;
             document.body.appendChild(modal);

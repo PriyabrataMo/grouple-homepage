@@ -140,7 +140,7 @@ export const Testimonials = () => {
         <div className="flex flex-col text-center md:flex-row md:items-start md:justify-between">
           {/* Heading Section */}
           <div className="mb-4 md:mb-0 text-center md:text-left">
-            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
+            <h2 className="heading-gradient text-[26px] md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               What Our Satisfied
               <br />
               Customers Say

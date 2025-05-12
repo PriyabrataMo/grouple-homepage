@@ -224,7 +224,7 @@ export default function FeaturesPage() {
   return (
     <section className="flex flex-1 flex-col bg-black  max-w-full">
       <Navbar />
-      <div className="flex flex-1 flex-col items-center px-6 sm:px-10 max-w-[1440px] mx-auto w-full">
+      <div className="flex flex-1 flex-col items-center px-2 md:px-6 max-w-[1440px] mx-auto w-full">
         <div
           className="items-center justify-center"
           style={{
@@ -257,7 +257,7 @@ export default function FeaturesPage() {
 
                 {/* Title in two lines */}
                 <div className="px-3 sm:px-4">
-                  <h2 className="heading-gradient text-2xl sm:text-3xl md:text-[54px] lg:text-5xl font-bold leading-snug tracking-tight mb-2 md:mb-4">
+                  <h2 className="heading-gradient text-[36px] md:text-[54px] lg:text-5xl font-bold leading-snug tracking-tight mb-2 md:mb-4">
                     Boost More Group & <br />
                     <span className=" md:inline md:ml-2">
                       Corporate Bookings
@@ -320,7 +320,7 @@ export default function FeaturesPage() {
                 Features You&apos;ll Need
               </span>
             </div>
-            <h1 className="heading-gradient text-2xl xs:text-3xl sm:text-4xl md:text-[64px] font-[650] mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-[-1px] sm:tracking-[-2px]">
+            <h1 className="heading-gradient text-[26px] md:text-[64px] font-[650] mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-[-1px] sm:tracking-[-2px]">
               One Platform,
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>

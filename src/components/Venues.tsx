@@ -77,7 +77,7 @@ export default function Venues() {
           </div>
 
           <div>
-            <h2 className="heading-gradient text-xl md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
+            <h2 className="heading-gradient text-[26px] md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               Built For Venues Just Like You
             </h2>
           </div>
