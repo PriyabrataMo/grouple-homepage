@@ -152,7 +152,7 @@ const Demo = () => {
       <div className="w-full px-4 mx-auto pt-10 flex justify-center">
         {/* Background container with 3D effect and border */}
         <div
-          className="relative rounded-4xl overflow-hidden h-[500px] md:h-[617px]"
+          className="relative rounded-4xl overflow-hidden h-[600px] md:h-[617px]"
           style={{
             width: "1080px",
             maxWidth: "100%",
@@ -211,7 +211,7 @@ const Demo = () => {
               </span>
             </div>
 
-            <h2 className="heading-gradient text-xl md:text-[54px] pt-10 lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
+            <h2 className="heading-gradient text-[30px] md:text-[54px] pt-10 lg:text-5xl font-bold leading-tight mb-4 md:mb-6 px-2">
               The Next-Generation Group
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
