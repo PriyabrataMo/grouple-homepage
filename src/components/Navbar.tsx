@@ -213,6 +213,10 @@ export const Navbar = () => {
                   href={item.href}
                   className="text-white text-lg font-medium hover:text-[#4A6AFE] transition-colors"
                   onClick={toggleMobileMenu}
+                  target={item.label === "Blogs" ? "_blank" : "_self"}
+                  rel={
+                    item.label === "Blogs" ? "noopener noreferrer" : undefined
+                  }
                 >
                   {item.label}
                 </Link>
