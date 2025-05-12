@@ -75,7 +75,7 @@ export const Faq = () => {
             </span>
           </div>
           <div>
-            <h2 className="heading-gradient text-[30px] md:text-[54px]  lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
+            <h2 className="heading-gradient text-[30px] md:text-[54px]  lg:text-5xl font-bold leading-tight tracking-[-2px] mb-4 md:mb-6">
               Frequently Asked Questions
             </h2>
           </div>

@@ -225,7 +225,7 @@ export const FeatureShowcase = () => {
 
           {/* Title in two lines */}
           <div className="px-3 sm:px-4">
-            <h2 className="heading-gradient text-[26px] md:text-[54px] lg:text-5xl font-bold leading-snug tracking-tight mb-2 md:mb-4">
+            <h2 className="heading-gradient text-[30px] md:text-[54px] lg:text-5xl font-bold leading-snug tracking-tight mb-2 md:mb-4">
               Simplify Your Workflow <br />
               <span className=" md:inline md:ml-2">
                 With Our Powerful Tools
