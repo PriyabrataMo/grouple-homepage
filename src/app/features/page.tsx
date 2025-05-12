@@ -315,7 +315,7 @@ export default function FeaturesPage() {
           />
         </svg>
       </div> */}
-            <div className="inline-block mb-4 md:mb-6  md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
+            <div className="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 bg-[#191624] rounded-full border border-gray-700">
               <span className="bg-gradient-to-r from-[#4B68FE] to-white bg-clip-text text-transparent font-medium text-sm md:text-base">
                 Features You&apos;ll Need
               </span>
