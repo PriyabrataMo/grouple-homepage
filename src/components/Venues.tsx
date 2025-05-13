@@ -152,7 +152,7 @@ export default function Venues() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeVenue.name}
-                  className="w-full md:w-2/5 p-6 md:p-4 md:pl-8 flex flex-col justify-center"
+                  className="w-full md:w-2/5 pt-6 px-6 md:p-4 md:pl-8 flex flex-col justify-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
