@@ -38,6 +38,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  twitter: {
+    card: "summary_large_image", // Defines the type of Twitter Card
+    title: "Grouple | Group Booking Management System", // Title displayed on Twitter
+    description:
+      "A concierge platform that simplifies group bookings and enhances the guest experience.", // Description displayed on Twitter
+    images: [
+      {
+        url: "https://www.grouple.tech/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Grouple - Group Booking Management System",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
