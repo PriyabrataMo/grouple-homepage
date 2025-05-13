@@ -35,8 +35,10 @@ export const Testimonials = () => {
   const [startX, setStartX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const arrowsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -103,6 +105,9 @@ export const Testimonials = () => {
       if (arrowsTimeoutRef.current) {
         clearTimeout(arrowsTimeoutRef.current);
       }
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
     };
   }, []);
 
@@ -111,11 +116,29 @@ export const Testimonials = () => {
     showNavigationArrows();
   }, []);
 
-  // Animation for desktop infinite scroll
-  useEffect(() => {
-    if (isMobile) return; // Don't run auto-scroll on mobile
+  // Mouse enter/leave handlers for desktop
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+      scrollIntervalRef.current = null;
+    }
+  };
 
-    const animateScroll = () => {
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    startAutoScroll();
+  };
+
+  // Function to start auto-scrolling
+  const startAutoScroll = () => {
+    if (isMobile || isPaused) return;
+
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+    }
+
+    scrollIntervalRef.current = setInterval(() => {
       if (containerRef.current) {
         if (
           containerRef.current.scrollLeft >=
@@ -124,15 +147,40 @@ export const Testimonials = () => {
           containerRef.current.scrollLeft = 0;
         } else {
           // Scrolling speed
-          containerRef.current.scrollLeft += 5;
+          containerRef.current.scrollLeft += 1;
         }
       }
-    };
+    }, 15);
+  };
 
-    // Using a 15ms interval for smoother performance across browsers
-    const animationId = setInterval(animateScroll, 15);
-    return () => clearInterval(animationId);
-  }, [isMobile]);
+  // Animation for desktop infinite scroll
+  useEffect(() => {
+    if (isMobile) return; // Don't run auto-scroll on mobile
+
+    startAutoScroll();
+
+    // Add event listeners for visibility change
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
+    };
+  }, [isMobile, isPaused]);
+
+  // Handle tab visibility changes
+  const handleVisibilityChange = () => {
+    if (document.hidden) {
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+        scrollIntervalRef.current = null;
+      }
+    } else {
+      startAutoScroll();
+    }
+  };
 
   return (
     <section className="py-10 md:py-24 overflow-hidden bg-black">
@@ -159,7 +207,11 @@ export const Testimonials = () => {
       </div>
 
       {/* Desktop Carousel */}
-      <div className="hidden md:block relative">
+      <div
+        className="hidden md:block relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {/* Carousel Container */}
         <div
           ref={containerRef}
