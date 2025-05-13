@@ -147,7 +147,7 @@ export const Testimonials = () => {
           containerRef.current.scrollLeft = 0;
         } else {
           // Scrolling speed
-          containerRef.current.scrollLeft += 1;
+          containerRef.current.scrollLeft += 2;
         }
       }
     }, 15);
