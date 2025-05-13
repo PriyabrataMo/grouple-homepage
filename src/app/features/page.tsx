@@ -229,7 +229,7 @@ export default function FeaturesPage() {
         <div
           className="items-center justify-center"
           style={{
-            backgroundImage: "url('/background/chatbg.jpeg')",
+            backgroundImage: "url('/featurePage/featBg.png')",
             backgroundSize: "auto",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
