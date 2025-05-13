@@ -177,7 +177,7 @@ export default function FeaturesPage() {
       description:
         "Display all your venues in one place with rich details and visuals. Let guests browse, compare, and book directly, boosting visibility and trust.",
       icon: "/featurePage/icons/1.svg",
-      imageSrc: "/featurePage/1.svg",
+      imageSrc: "/featurePage/1.png",
     },
     {
       title: "Branded Microsites to Drive Group Bookings",
