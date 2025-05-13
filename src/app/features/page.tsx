@@ -90,8 +90,7 @@ const FeatureItem = ({
                   transform: "none",
                 }}
                 priority
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAC0l" // Optionally, add a base64 string for a blurred image
+                loading="eager" // Optionally, add a base64 string for a blurred image
               />
             </div>
           </div>
