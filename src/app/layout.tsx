@@ -18,8 +18,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Grouple",
-  description: "Grouple Booking Management App",
+  title: "Grouple |  Group Booking Management System",
+  description:
+    "A concierge platform that simplifies group bookings and enhances the guest experience.",
 };
 
 export default function RootLayout({
