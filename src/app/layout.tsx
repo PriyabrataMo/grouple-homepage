@@ -45,12 +45,26 @@ export const metadata: Metadata = {
       "A concierge platform that simplifies group bookings and enhances the guest experience.", // Description displayed on Twitter
     images: [
       {
-        url: "https://www.grouple.tech/images/og-image.png",
+        url: "https://grouple.tech/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Grouple - Group Booking Management System",
       },
     ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://grouple.tech",
   },
 };
 
