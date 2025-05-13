@@ -140,13 +140,13 @@ export default function Venues() {
 
           {/* Responsive venue display */}
           <div
-            className="bg-[#161616] rounded-[48] overflow-hidden"
+            className="bg-[#161616] py-10 rounded-[45] overflow-hidden"
             style={{
               background: "linear-gradient(to bottom right, #191624, #0a090d)",
             }}
           >
             <div
-              className="flex flex-col md:flex-row md:pl-10"
+              className="flex flex-col md:flex-row md:pl-20"
               style={{ height: "auto" }}
             >
               <AnimatePresence mode="wait">
@@ -179,7 +179,7 @@ export default function Venues() {
                     />
                   </motion.div>
                   <motion.h3
-                    className="heading-gradient text-xl md:text-2xl font-bold mb-3 md:mb-4"
+                    className="heading-gradient font-[Plus Jakarta] text-xl md:text-[24px] font-bold mb-3 md:mb-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -191,7 +191,7 @@ export default function Venues() {
                     {activeVenue.name}
                   </motion.h3>
                   <motion.p
-                    className="text-gray-400 text-sm md:text-base leading-relaxed mb-6 md:mb-0"
+                    className="text-gray-400 font-[Manrope] text-sm md:text-[18px] md:text-base leading-relaxed mb-6 md:mb-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -235,8 +235,8 @@ export default function Venues() {
                         </div>
                       </div>
                     ) : (
-                      <div className="h-[374px] w-[481px] max-w-[500px] rounded-2xl p-5 bg-[#242426]">
-                        <div className="w-full h-full overflow-hidden rounded-xl">
+                      <div className="h-[374px] w-[481px] max-w-[500px] rounded-[30] p-6 bg-[#242426]">
+                        <div className="w-full h-full overflow-hidden rounded-[24]">
                           <Image
                             src={activeVenue.image}
                             alt={`${activeVenue.name} venue`}

@@ -164,7 +164,7 @@ const Awards = () => {
   return (
     <section className="py-12 md:py-24 w-full overflow-hidden">
       <div className="container mx-auto px-4 content-center">
-        <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#191624] to-[#0a090d] p-4 md:p-10 content-center justify-center">
+        <div className="max-w-7xl mx-auto rounded-[45] bg-gradient-to-br from-[#191624] to-[#0a090d] p-4 md:p-10 content-center justify-center">
           <div className="flex justify-center items-center">
             <h2 className="heading-gradient text-lg sm:text-xl font-medium mb-2 sm:mb-6 px-2 pt-6 md:pt-10 text-center">
               Awards and recognition

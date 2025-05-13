@@ -90,6 +90,7 @@ const FeatureItem = ({
                   transform: "none",
                 }}
                 priority
+                unoptimized
               />
             </div>
           </div>
