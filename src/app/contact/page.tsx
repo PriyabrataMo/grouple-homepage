@@ -45,8 +45,8 @@ export default function ContactPage() {
         return;
       }
 
-      if (formData.message.length < 100) {
-        toast.error("Message must be at least 100 characters");
+      if (formData.message.length < 30) {
+        toast.error("Message must be at least 30 characters");
         setIsSubmitting(false);
         return;
       }
