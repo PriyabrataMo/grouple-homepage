@@ -21,6 +21,23 @@ export const metadata: Metadata = {
   title: "Grouple |  Group Booking Management System",
   description:
     "A concierge platform that simplifies group bookings and enhances the guest experience.",
+  openGraph: {
+    title: "Grouple | Group Booking Management System",
+    description:
+      "A concierge platform that simplifies group bookings and enhances the guest experience.",
+    url: "https://grouple.tech",
+    siteName: "Grouple",
+    images: [
+      {
+        url: "https://grouple.tech/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Grouple - Group Booking Management System",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
