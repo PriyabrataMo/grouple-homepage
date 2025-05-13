@@ -75,6 +75,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        property="og:title"
+        content="Grouple | Group Booking Management System"
+      />
+
       <body
         className={`${plusJakartaSans.variable} ${manrope.variable} antialiased bg-black text-white binary-bg`}
       >
