@@ -140,7 +140,7 @@ export default function Venues() {
 
           {/* Responsive venue display */}
           <div
-            className="bg-[#161616] py-10 rounded-[45] overflow-hidden"
+            className="bg-[#161616] md:py-10 rounded-[45] overflow-hidden"
             style={{
               background: "linear-gradient(to bottom right, #191624, #0a090d)",
             }}
