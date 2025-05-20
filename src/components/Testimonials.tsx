@@ -27,6 +27,11 @@ const duplicatedTestimonials = [
   ...testimonials,
   ...testimonials,
   ...testimonials,
+  ...testimonials,
+  ...testimonials,
+  ...testimonials,
+  ...testimonials,
+  ...testimonials,
 ];
 
 export const Testimonials = () => {
@@ -183,7 +188,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="py-10 md:py-24 w-full max-w-screen mx-auto bg-black">
+    <section className="py-10 md:py-24 overflow-hidden bg-black">
       <div className="max-w-7xl mx-auto px-4 mb-6 md:mb-10">
         <div className="flex flex-col text-center md:flex-row md:items-start md:justify-between">
           {/* Heading Section */}

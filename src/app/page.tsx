@@ -15,7 +15,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Navbar />
 
-      <main className="flex flex-1 flex-col items-center px-2 md:px-6 py-10 max-w-[1440px] mx-auto w-full">
+      <main className="flex flex-1 flex-col items-center px-2 md:px-6 py-10  overflow-x-hidden mx-auto w-full">
         <Hero />
         <CompanyLogos />
 
