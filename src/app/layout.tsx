@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -80,7 +81,7 @@ export default function RootLayout({
         property="og:title"
         content="Grouple | Group Booking Management System"
       />
-
+      <GoogleAnalytics gaId="G-K3986096MR" />
       <body
         className={`${plusJakartaSans.variable} ${manrope.variable} antialiased bg-black text-white binary-bg`}
       >
