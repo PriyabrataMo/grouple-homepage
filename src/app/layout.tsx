@@ -81,7 +81,7 @@ export default function RootLayout({
         property="og:title"
         content="Grouple | Group Booking Management System"
       />
-      <GoogleAnalytics gaId="G-K3986096MR" />
+      <GoogleAnalytics gaId="G-R64G6YLVDV" />
       <body
         className={`${plusJakartaSans.variable} ${manrope.variable} antialiased bg-black text-white binary-bg`}
       >
